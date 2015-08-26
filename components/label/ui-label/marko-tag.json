@@ -1,0 +1,7 @@
+{
+    "@label": "string",
+    "@tag": "string",
+    "@ribbon": "string",
+    "@attached": "string",
+    "@align": "string"
+}

@@ -1,0 +1,14 @@
+<a class="$data.status step">
+  <if ${data.icon}>
+    <ui-icon icon="$data.icon"></ui-icon>
+  </if>
+  <if ${data.hasContent}>
+    <div class="content">
+      <if $data.label>
+        <div class="title">$data.label</div>
+      </if>
+      <if $data.desc>
+        <div class="description">$data.desc</div>
+      </if>
+    </div>
+  </if></a>

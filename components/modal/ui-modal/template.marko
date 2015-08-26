@@ -1,0 +1,22 @@
+
+<div class="ui $data.ui modal">
+  <if test="$data.header">
+    <div class="header">$data.header</div>
+  </if>
+  <if test="$data.content">
+    <div class="content">$data.content</div>
+  </if>
+  <if test="$data.img">
+    <div class="image content">
+      <ui-image attrs="$data.img"></ui-image>
+      <div class="description">$data.img.caption</div>
+    </div>
+  </if>
+  <if test="$data.actions">
+    <div class="actions">
+      <for each="action in data.actions">   
+        <div class="ui $action.ui button">$action.label</div>
+      </for>
+    </div>
+  </if>
+</div>

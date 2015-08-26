@@ -1,0 +1,30 @@
+{
+  "name": "semantic-tags",
+  "version": "0.0.1",
+  "description": "Marko taglib for Semantic UI",
+  "homepage": "",
+  "repository": "kristianmandrup/semantic-tags",
+  "author": {
+    "name": "Kristian Mandrup",
+    "email": "kmandrup@gmail.com",
+    "url": ""
+  },
+  "keywords": [
+    "marko",
+    "semantic",
+    "ui"
+  ],
+  "dependencies": {
+    "extend": "^3.0.0",
+    "marko": "marko-js/marko#master",
+    "marko-tag-body": "^1.0.1"
+  },
+  "devDependencies": {
+    "marooka": "kristianmandrup/markoa#master",
+    "gulp": "^3.6.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "node indexes.js"
+  }
+}

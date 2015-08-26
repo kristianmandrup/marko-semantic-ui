@@ -1,0 +1,8 @@
+{
+    "@ui": "string",
+    "@label": "string",
+    "@img": "string",
+    "@content": "string",
+    "@actions": "array",
+    "@header": "string"
+}

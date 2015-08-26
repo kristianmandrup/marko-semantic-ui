@@ -1,0 +1,11 @@
+
+<div class="ui $data.size breadcrumb">
+  <for each="item in data.list"><a class="$item.active section">$item.label</a>
+    <if test="data.icon">
+      <ui-icon icon="$data.icon divider" align="right"></ui-icon>
+    </if>
+    <else>
+      <div class="divider">$data.divider</div>
+    </else>
+  </for>
+</div>

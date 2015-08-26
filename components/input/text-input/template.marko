@@ -1,0 +1,20 @@
+
+<div class="ui input ${data.hasIcon} ${data.hasAction} ${data.focus} ${data.loading} ${data.error} ${data.align} ${data.labeled}">
+  <if test="$data.label">
+    <div class="ui label">$data.label</div>
+  </if>
+  <input type="$data.type" placeholder="$data.placeholder">
+  <if test="$data.icon">
+    <ui-icon icon="$data.icon"></ui-icon>
+  </if>
+  <if test="$data.menu">
+    <div class="menu">
+      <for each="item in data.menu.items"></for>
+      <div class="item">$item.label</div>
+    </div>
+  </if>
+  <if test="$data.link"><a class="ui tag label">$data.link</a></if>
+  <if test="$data.action">
+    <button class="ui button">${data.action || data.action.label}</button>
+  </if>
+</div>
