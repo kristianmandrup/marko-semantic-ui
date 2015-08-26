@@ -2,7 +2,7 @@
 var path = require('path');
 
 var root = {
-  components: 'components'
+  components: 'semantic/components'
 }
 
 module.exports = {
