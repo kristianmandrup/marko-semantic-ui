@@ -1,6 +1,5 @@
 div(class='$data.status title')
-  ui-icon(attrs='$data.icon' if='data.icon')
+  ui-icon(attrs='data.icon' if='data.icon')
   | $data.label
 div(class='$data.status content')
-  p 
-  | $data.text
+  p(tag-body-or='data.body')
