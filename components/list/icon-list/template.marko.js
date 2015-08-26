@@ -5,7 +5,8 @@ function create(__helpers) {
       forEach = __helpers.f,
       __renderer = __helpers.r,
       ______item_icon_item_renderer_js = __renderer(require("../../item/icon-item/renderer")),
-      __tag = __helpers.t;
+      __tag = __helpers.t,
+      tagBody = require("marko-tag-body/src/tag-body-helper");
 
   return function render(data, out) {
     out.w('<div class="ui list">');
@@ -13,14 +14,13 @@ function create(__helpers) {
     forEach(data.list, function(item) {
       __tag(out,
         ______item_icon_item_renderer_js,
-        {
-          "ui": item.ui,
-          "icon": item.icon,
-          "desc": item.desc,
-          "label": item.label
-        },
+        {},
         function(out) {
-          out.w(' <div class="description"> </div>');
+          out.w(' <div class="description"> ');
+
+          tagBody(out, item.body);
+
+          out.w('</div>');
         });
     });
 

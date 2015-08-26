@@ -1,10 +1,10 @@
 
 <div class="ui $data.ui search">
   <input type="text" placeholder="${data.placeholder}" class="prompt">
-  <if test="$data.icon">
+  <if test="data.icon">
     <ui-icon attrs="$data.icon"></ui-icon>
   </if>
-  <if test="$data.results">
+  <if test="data.results">
     <div class="results">$data.results</div>
   </if>
 </div>

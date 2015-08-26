@@ -1,13 +1,13 @@
 <a class="$data.status step">
-  <if ${data.icon}>
+  <if test="data.icon">
     <ui-icon icon="$data.icon"></ui-icon>
   </if>
-  <if ${data.hasContent}>
+  <if test="data.hasContent">
     <div class="content">
-      <if $data.label>
+      <if test="data.label">
         <div class="title">$data.label</div>
       </if>
-      <if $data.desc>
+      <if test="data.desc">
         <div class="description">$data.desc</div>
       </if>
     </div>

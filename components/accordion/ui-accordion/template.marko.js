@@ -2,17 +2,15 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
-      escapeXmlAttr = __helpers.xa;
+      escapeXmlAttr = __helpers.xa,
+      tagBody = require("marko-tag-body/src/tag-body-helper");
 
   return function render(data, out) {
     out.w('<div class="ui ' +
       escapeXmlAttr(data.ui) +
       ' accordion">');
 
-    if (data.renderBody) {
-      data.renderBody(out);
-
-    }
+    tagBody(out, data.body);
 
     out.w('</div>');
   };

@@ -1,6 +1,6 @@
 
-<div class="ui $data.align container">
-  <for each="item in out.global.menuItems">
-    <link-item active="$item.active" link="$item.link" label="$item.label"></link-item>
+<div class="ui $data.ui container">
+  <for each="item in data.list">
+    <link-item attrs="item"></link-item>
   </for>
 </div>

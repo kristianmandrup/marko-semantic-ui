@@ -7,7 +7,7 @@ var jadeMarko = require('jade-marko');
 gulp.task('jade:marko', function() {
   gulp.src(paths.jade)
     .pipe(jadeMarko())
-    .pipe(gulp.dest('./apps'))
+    .pipe(gulp.dest('./' + paths.components))
 });
 
 gulp.task('jade:watch', function () {

@@ -32,10 +32,15 @@
   },
   "devDependencies": {
     "marooka": "kristianmandrup/markoa#master",
-    "gulp": "^3.6.0"
+    "gulp": "^3.6.0",
+    "require-dir": "^0.3.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
+    "jade": "^1.11.0",
+    "jade-marko": "^0.1.3"
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "node indexes.js"
+    "index": "node indexes.js"
   }
 }

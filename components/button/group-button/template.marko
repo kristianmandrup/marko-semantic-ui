@@ -1,6 +1,6 @@
 
-<div class="ui buttons">
+<div class="ui $data.ui buttons">
   <for each="item in data.list">
-    <button class="ui button">$item.label</button>
+    <action-button attrs="item"></action-button>
   </for>
 </div>

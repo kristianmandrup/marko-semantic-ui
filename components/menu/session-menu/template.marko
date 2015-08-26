@@ -1,9 +1,8 @@
 
-<div class="${align menu}">
-  <div class="item">
-    <link-button link="${login.link}" label="${login.label}"></link-button>
-  </div>
-  <div class="item">
-    <link-button link="${register.link}" type="primary" label="${register.label}"> </link-button>
-  </div>
+<div class="ui $data.ui menu">
+  <for each="item in data.list">
+    <div class="item">
+      <link-button attrs="item"></link-button>
+    </div>
+  </for>
 </div>

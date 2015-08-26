@@ -1,8 +1,6 @@
 
 <div class="$data.status title">
-  <if test="data.icon">
-    <ui-icon attrs="$data.icon"></ui-icon>
-  </if>$data.label
+  <ui-icon attrs="$data.icon" if="data.icon"></ui-icon>$data.label
 </div>
 <div class="$data.status content">
   <p> </p>$data.text

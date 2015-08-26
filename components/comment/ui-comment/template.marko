@@ -1,17 +1,11 @@
 
-<div class="comment">
-  <if test="$data.avatar">
-    <avatar-img attrs="$data.avatar"></avatar-img>
-  </if>
+<div class="comment $data.ui">
+  <avatar-img attrs="$data.avatar" if="$data.avatar"></avatar-img>
   <div class="content"><a class="author">Matt</a>
-    <if test="$data.meta">
-      <div class="metadata"><span class="$data.meta.ui">$data.meta.label</span></div>
-    </if>
-    <div class="text">$data.text</div>
-    <if test="$data.actions">
-      <div class="actions">
-        <for each="action in data.actions"><a class="$action.ui">$action.label</a></for>
-      </div>
-    </if>
+    <div if="data.meta" class="metadata"><span class="$data.meta.ui">$data.meta.label</span></div>
+    <div tag-body="data.body" class="text"></div>
+    <div if="data.actions" class="actions">
+      <for each="action in data.actions"><a class="$action.ui">$action.label</a></for>
+    </div>
   </div>
 </div>

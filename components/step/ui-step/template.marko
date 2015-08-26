@@ -1,11 +1,13 @@
 
 <div class="$data.status step">
-  <ui-icon icon="$data.icon"></ui-icon>
+  <if test="data.icon">
+    <ui-icon attrs="data.icon"></ui-icon>
+  </if>
   <div class="content">
-    <if test="$data.label">
+    <if test="data.label">
       <div class="title">$data.label</div>
     </if>
-    <if test="$data.desc">
+    <if test="data.desc">
       <div class="description">$data.desc</div>
     </if>
   </div>

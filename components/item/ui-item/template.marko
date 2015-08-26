@@ -1,16 +1,16 @@
 
 <div class="item"> 
-  <if test="$data.label">$data.label</if>
-  <if test="$data.icon">
-    <ui-icon attrs="$data.icon"></ui-icon>
+  <if test="data.label">$data.label</if>
+  <if test="data.icon">
+    <ui-icon attrs="data.icon"></ui-icon>
   </if>
-  <if test="$data.content">
+  <if test="data.content">
     <div class="content">
-      <if test="$data.link"><a href="$data.link.url">${data.link.label || data.link.url}</a></if>
+      <if test="data.link"><a href="$data.link.url">${data.link.label || data.link.url}</a></if>
       <else>
-        <if test="$data.header"><a class="header">$data.header</a></if>
-        <if test="$data.desc">$data.desc</if>
-        <if test="$data.content">$data.content</if>
+        <if test="data.header"><a class="header">$data.header</a></if>
+        <if test="data.desc">$data.desc</if>
+        <if test="data.content">$data.content</if>
       </else>
     </div>
   </if>

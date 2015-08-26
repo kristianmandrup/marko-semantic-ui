@@ -38,9 +38,13 @@ Development
 
 Use Jade to develop templates. Then run `gulp jade:marko` to generate marko templates!
 
-When you are happy with your changes, create index files for components by running `node indexes.js` or simply `npm prepublish`.
+When you are happy with your changes, create index files for components by running:
 
-Note: it should be autorun before `npm publish`
+`node indexes.js`
+
+Or via npm:
+
+`npm run index`
 
 License
 -------
