@@ -16,12 +16,7 @@ function create(__helpers) {
     forEach(data.list, function(item) {
       __tag(out,
         ______item_icon_item_renderer_js,
-        {
-          "ui": item.ui,
-          "icon": item.icon,
-          "label": item.label,
-          "desc": item.desc
-        });
+        item);
     });
 
     out.w('</div>');

@@ -16,7 +16,7 @@ function create(__helpers) {
     if (data.icon) {
       __tag(out,
         ______icon_ui_icon_renderer_js,
-        {});
+        $data.icon);
     }
 
     out.w(escapeXml(data.label) +

@@ -15,7 +15,8 @@ function create(__helpers) {
         escapeXmlAttr(data.name) +
         ' icon"></i>');
     }
-    else {
+
+    if (!data.tip) {
       out.w('<i class="' +
         escapeXmlAttr(data.ui) +
         ' ' +

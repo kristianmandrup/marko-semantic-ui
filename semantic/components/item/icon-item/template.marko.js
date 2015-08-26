@@ -11,10 +11,7 @@ function create(__helpers) {
     out.w('<div class="item">');
     __tag(out,
       ______icon_ui_icon_renderer_js,
-      {
-        "name": data.icon.name,
-        "ui": data.icon.name
-      });
+      data.icon);
 
     out.w('<div class="content"><a class="header">' +
       escapeXml(data.label) +

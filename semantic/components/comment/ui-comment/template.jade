@@ -4,7 +4,7 @@ div(class='comment $data.ui')
     a.author Matt
     div(class='metadata' if='data.meta')
       span(class='$data.meta.ui') $data.meta.label
-    div(class='text' tag-body='data.body')
+    div(class='text' tag-body-or='data.body')
     div(class='actions' if='data.actions')
       for(each='action in data.actions')
         a(class='$action.ui') $action.label
