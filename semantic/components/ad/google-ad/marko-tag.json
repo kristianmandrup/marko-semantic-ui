@@ -1,5 +1,6 @@
 {
     "@client": "string",
     "@slot": "string",
-    "@ui": "string"
+    "@ui": "string",
+    "@format": "string"    
 }
