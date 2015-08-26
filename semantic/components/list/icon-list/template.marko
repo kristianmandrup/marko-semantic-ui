@@ -1,8 +1,6 @@
 
-<div class="ui list">
+<div class="ui $data.ui list">
   <for each="item in data.list">
-    <icon-item attrs="item"> 
-      <div tag-body="item.body" class="description"> </div>
-    </icon-item>
+    <icon-item ui="$item.ui" icon="$item.icon" label="$item.label" desc="$item.desc"></icon-item>
   </for>
 </div>
