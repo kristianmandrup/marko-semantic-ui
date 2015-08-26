@@ -1,0 +1,16 @@
+.event
+  .label
+    img(src='$data.src')
+  .content
+    xif(test='$data.date')
+      .date
+        $data.date
+    xif(test='$data.content')
+      .summary
+        $data.content
+    xif(test='$data.meta')
+      .meta
+        $data.meta
+    xif(test='$data.extra')
+      .extra
+        $data.extra

@@ -1,13 +1,13 @@
-semantic-tags [![NPM version](https://badge.fury.io/js/semantic-tags.svg)](https://npmjs.org/package/semantic-tags) [![Build Status](https://travis-ci.org/kristianmandrup/semantic-tags.svg?branch=master)](https://travis-ci.org/kristianmandrup/semantic-tags) [![Dependency Status](https://david-dm.org/kristianmandrup/semantic-tags.svg?theme=shields.io)](https://david-dm.org/kristianmandrup/semantic-tags)
-=====================================================================================================================================================================================================================================================================================================================================================================================================================
+marko-semantic-ui-taglibs [![NPM version](https://badge.fury.io/js/marko-semantic-ui-taglibs.svg)](https://npmjs.org/package/marko-semantic-ui-taglibs) [![Build Status](https://travis-ci.org/kristianmandrup/marko-semantic-ui-taglibs.svg?branch=master)](https://travis-ci.org/kristianmandrup/marko-semantic-ui-taglibs) [![Dependency Status](https://david-dm.org/kristianmandrup/marko-semantic-ui-taglibs.svg?theme=shields.io)](https://david-dm.org/kristianmandrup/marko-semantic-ui-taglibs)
+=========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-> Marko taglib for Semantic UI
+> Marko taglibs for Semantic UI
 
 Install
 -------
 
 ```sh
-$ npm install --save semantic-tags
+$ npm install --save marko-semantic-ui-taglibs
 ```
 
 Usage
@@ -21,12 +21,12 @@ Have your taglib reference a `package.json` such as the one in your root project
     ]
 ```
 
-In your `package.json`, ensure `semantic-tags` is listed in `dependencies`
+In your `package.json`, ensure `marko-semantic-ui-taglibs` is listed in `dependencies`
 
 ```json
 {
     "dependencies": {
-        "semantic-tags": "^0.0.1",
+        "marko-semantic-ui-taglibs": "^0.0.1",
     }
 }
 ```

@@ -1,13 +1,24 @@
 {
-  "name": "semantic-tags",
+  "name": "marko-semantic-ui-taglibs",
   "version": "0.0.1",
-  "description": "Marko taglib for Semantic UI",
+  "description": "Marko taglibs for Semantic UI",
   "homepage": "",
-  "repository": "kristianmandrup/semantic-tags",
+  "repository": "kristianmandrup/marko-semantic-ui-taglibs",
   "author": {
     "name": "Kristian Mandrup",
     "email": "kmandrup@gmail.com",
     "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kristianmandrup/marko-semantic-ui-taglibs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kristianmandrup/marko-semantic-ui-taglibs/issues"
+  },
+  "engines": {
+    "node": ">= 0.12.0",
+    "npm": ">=1.4.3"
   },
   "keywords": [
     "marko",

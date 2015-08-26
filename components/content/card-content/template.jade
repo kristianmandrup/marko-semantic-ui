@@ -1,0 +1,13 @@
+div(class='$data.ui content')
+  xif(test='$data.icons')
+    ui-icons(list='$data.icons')
+  xif(test='$data.header')
+    a.header $data.header
+  xif(test='$data.meta')
+    .meta
+      span.date $data.meta
+  xif(test='$data.desc')
+    .description
+      | $data.desc
+  xif(test='$data.btn')
+    ui-button(attrs='$data.btn')

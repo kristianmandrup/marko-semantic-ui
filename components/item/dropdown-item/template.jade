@@ -1,0 +1,5 @@
+div(class='ui $data.ui dropdown item' tag-body='data.renderBody || data.body')
+  i.dropdown.icon
+  .menu
+    for(each='item in data.list')
+      .item $item.label

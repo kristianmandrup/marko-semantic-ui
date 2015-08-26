@@ -1,0 +1,16 @@
+.item 
+  xif(test='data.label')
+    $data.label
+  xif(test='data.icon')
+    ui-icon(attrs='data.icon')
+  xif(test='data.content')
+    .content
+      xif(test='data.link')
+        a(href='$data.link.url') ${data.link.label || data.link.url}
+      xelse
+        xif(test='data.header')
+          a.header $data.header
+        xif(test='data.desc')
+          $data.desc
+        xif(test='data.content')
+          $data.content

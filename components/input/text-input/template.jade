@@ -1,0 +1,13 @@
+div(class='ui $data.ui input')
+  div(class='ui label' tag-body='data.renderBody || data.label')
+  input(type='$data.type', placeholder='$data.placeholder')
+  xif(test='data.icon')
+    ui-icon(icon='$data.icon')
+  xif(test='data.menu')
+    .menu
+      for(each='item in data.menu')
+        .item $item.label
+  xif(test='data.link')
+    a.ui.tag.label $data.link
+  xif(test='data.action')
+    action-button(attrs='data.action')

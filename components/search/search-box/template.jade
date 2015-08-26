@@ -1,0 +1,7 @@
+div(class='ui $data.ui search')
+  input.prompt(type='text', placeholder='${data.placeholder}')
+  xif(test='data.icon')
+    ui-icon(attrs='$data.icon')
+  xif(test='data.results')
+    .results
+      $data.results
