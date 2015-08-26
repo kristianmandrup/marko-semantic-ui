@@ -28,7 +28,7 @@
   "dependencies": {
     "extend": "^3.0.0",
     "marko": "marko-js/marko#master",
-    "marko-tag-body": "^1.0.1"
+    "marko-tag-body": "kristianmandrup/marko-tag-body#or-variant"
   },
   "devDependencies": {
     "marooka": "kristianmandrup/markoa#master",
