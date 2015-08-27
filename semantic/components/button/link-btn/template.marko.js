@@ -4,7 +4,7 @@ function create(__helpers) {
       notEmpty = __helpers.ne,
       attr = __helpers.a,
       escapeXmlAttr = __helpers.xa,
-      tagBody = require("../../../../../../markoa/marko-tag-body/src/tag-body-helper");
+      tagBody = require("marko-tag-body/src/tag-body-helper");
 
   return function render(data, out) {
     out.w('<a' +
@@ -13,7 +13,7 @@ function create(__helpers) {
       escapeXmlAttr(data.ui) +
       ' button">');
 
-    tagBody(out, undefined || data.renderBody);
+    tagBody(out, data.label || data.renderBody);
 
     out.w('</a>');
   };

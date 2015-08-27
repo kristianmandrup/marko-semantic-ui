@@ -3,7 +3,7 @@
   <avatar-img attrs="$data.avatar" if="$data.avatar"></avatar-img>
   <div class="content"><a class="author">Matt</a>
     <div if="data.meta" class="metadata"><span class="$data.meta.ui">$data.meta.label</span></div>
-    <div tag-body-or="data.body" class="text"></div>
+    <div body-or="data.body" class="text"></div>
     <div if="data.actions" class="actions">
       <for each="action in data.actions"><a class="$action.ui">$action.label</a></for>
     </div>
