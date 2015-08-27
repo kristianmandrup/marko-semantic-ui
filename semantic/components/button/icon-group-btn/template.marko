@@ -1,6 +1,6 @@
 
-<div class="ui icon $data.ui buttons">
+<div body-only-if="data.list" tag-body="" class="ui icon $data.ui buttons">
   <for each="item in data.list">
-    <icon-button attrs="item"></icon-button>
+    <icon-btn attrs="item"></icon-btn>
   </for>
 </div>
