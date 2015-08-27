@@ -1,5 +1,7 @@
 
-<div class="ui $data.ui slider checkbox">
-  <input type="checkbox" name="$data.name" checked="$data.checked" tabindex="$data.tab" class="hidden">
-  <label>$data.label</label>
+<div body-only-if="!data.field" class="$data.field field">
+  <div class="ui $data.ui slider checkbox">
+    <input type="checkbox" name="$data.name" checked="$data.checked" tabindex="$data.tab" class="hidden">
+    <label>$data.label</label>
+  </div>
 </div>

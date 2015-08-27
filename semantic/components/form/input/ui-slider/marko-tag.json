@@ -1,6 +1,7 @@
 {
     "@ui": "string",
     "@label": "string",
+    "@field": "string",    
     "@name": "string",
     "@checked": "boolean",
     "@tab": "number"
