@@ -29,6 +29,10 @@ Use in `MultiSelect` and `Dropdown`
 
 ### Textarea input
 
+`text-area()`
+
 ### Slider
+
+`ui-slider()`
 
 ### Toggle

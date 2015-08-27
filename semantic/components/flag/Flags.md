@@ -2,4 +2,4 @@
 
 French flag
 
-`icon-flag(country='fr')`
+`icon-flag(country='france')`
