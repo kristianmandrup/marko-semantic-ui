@@ -1,6 +1,7 @@
 {
     "@name": "string",
     "@type": "string",
+    "@tab": "number",
     "@value": "string",
     "@placeholder": "string"
 }
