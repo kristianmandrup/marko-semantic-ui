@@ -23,6 +23,17 @@ ui-fields
 
 ### Input
 
+#### Radio
+
+```jade
+radio-btn(name='work' value='yes' label='work' field='yes')
+radio-btn(name='work' value='no' label='work' field='yes')
+```
+
+Buttons from list data
+
+`radio-btns(list='data.work' name='work')`
+
 ### Form
 
 ### Messages
@@ -41,4 +52,17 @@ ui-form
     multi-select(name='mySkills' list='data.skills')
   radio-btn(name='work' value='yes' label='work' field='yes')
   radio-btn(name='work' value='no' label='work' field='yes')
+```
+
+Or even more tight!
+
+```jade
+line-input(name='username' field='User name')
+drop-down(name='coolSkills' list='data.skills' field='Skills')
+multi-select(name='mySkills' list='data.skills' field='Skills')
+check-box(name='male' checked='true' field='Male')
+text-area(name='text' placeholder='Your text' rows='10' field='Text')
+
+check-boxes(list='data.languages' label='Languages')
+radio-btns(list='data.work' name='work')
 ```

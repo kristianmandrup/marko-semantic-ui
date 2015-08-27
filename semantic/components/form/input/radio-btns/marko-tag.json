@@ -1,0 +1,5 @@
+{
+    "@ui": "string",
+    "@name": "string",    
+    "@list": "array"
+}

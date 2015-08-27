@@ -1,0 +1,7 @@
+
+<div body-only-if="!data.ui" class="$data.ui fields">
+  <label if="data.label">$data.label</label>
+  <for each="item in data.list">
+    <check-box attrs="item"></check-box>
+  </for>
+</div>
