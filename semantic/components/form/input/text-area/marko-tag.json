@@ -1,5 +1,6 @@
 {
     "@ui": "string",
+    "@field": "string",
     "@label": "string",
     "@name": "string",
     "@placeholder": "string",

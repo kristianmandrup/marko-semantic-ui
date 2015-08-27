@@ -15,19 +15,14 @@ function create(__helpers) {
         ' field">');
     }
 
-    var __strip1 = !(!data.ui);
-
-    if (__strip1) {
-      out.w('<div class="ui ' +
-        escapeXmlAttr(data.ui) +
-        ' checkbox">');
-    }
-
-    out.w('<input type="checkbox"' +
+    out.w('<div class="ui ' +
+      escapeXmlAttr(data.ui) +
+      ' radio checkbox"><input type="radio"' +
+      attr("value", data.value) +
       attr("name", data.name) +
       attr("checked", data.checked) +
       attr("tabindex", data.tab) +
-      ' class="hidden">');
+      '>');
 
     if (data.label) {
       out.w('<label>' +
@@ -35,9 +30,7 @@ function create(__helpers) {
         '</label>');
     }
 
-    if (__strip1) {
-      out.w('</div>');
-    }
+    out.w('</div>');
 
     if (__strip0) {
       out.w('</div>');

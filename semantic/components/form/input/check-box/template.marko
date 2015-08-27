@@ -1,5 +1,7 @@
 
-<div body-only-if="!data.ui" class="ui $data.ui checkbox">
-  <input type="checkbox" name="$data.name" checked="$data.checked" tabindex="$data.tab" class="hidden">
-  <label if="data.label">$data.label</label>
+<div body-only-if="!data.field" class="$data.field field">
+  <div body-only-if="!data.ui" class="ui $data.ui checkbox">
+    <input type="checkbox" name="$data.name" checked="$data.checked" tabindex="$data.tab" class="hidden">
+    <label if="data.label">$data.label</label>
+  </div>
 </div>

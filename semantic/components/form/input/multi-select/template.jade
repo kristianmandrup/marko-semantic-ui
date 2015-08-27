@@ -1,2 +1,4 @@
-select(class='ui $data.ui dropdown' multiple='')
-  select-opts(list='$data.list')
+div(class='field' body-only-if='!data.field')
+  label(if='data.field') $data.field
+  select(name='$data.name' class='ui $data.ui dropdown' multiple='' tab-index='$data.tab')
+    select-opts(list='data.list')

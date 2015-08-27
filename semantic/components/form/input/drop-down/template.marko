@@ -1,4 +1,7 @@
 
-<select name="$data.name" tab-index="$data.tab" class="ui $data.ui search dropdown">
-  <select-opts list="data.list"></select-opts>
-</select>
+<div body-only-if="!data.field" class="field">
+  <label if="data.field">$data.field</label>
+  <select name="$data.name" tab-index="$data.tab" class="ui $data.ui search dropdown">
+    <select-opts list="data.list"></select-opts>
+  </select>
+</div>

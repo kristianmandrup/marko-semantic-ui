@@ -1,4 +1,7 @@
 
-<div body-only-if="!data.ui" class="ui $data.ui input">
-  <input type="$data.type" value="$data.value" name="$data.name" placeholder="$data.placeholder" tab-index="$data.tab">
+<div body-only-if="!data.field" class="field">
+  <label if="data.field">$data.field</label>
+  <div body-only-if="!data.ui" class="ui $data.ui input">
+    <input type="$data.type" value="$data.value" name="$data.name" placeholder="$data.placeholder" tab-index="$data.tab">
+  </div>
 </div>

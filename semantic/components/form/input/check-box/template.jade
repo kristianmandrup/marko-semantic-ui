@@ -1,3 +1,4 @@
-div(class='ui $data.ui checkbox' body-only-if='!data.ui')
-  input.hidden(type='checkbox' name='$data.name' checked='$data.checked' tabindex='$data.tab')
-  label(if='data.label') $data.label
+div(class='$data.field field' body-only-if='!data.field')
+  div(class='ui $data.ui checkbox' body-only-if='!data.ui')
+    input.hidden(type='checkbox' name='$data.name' checked='$data.checked' tabindex='$data.tab')
+    label(if='data.label') $data.label

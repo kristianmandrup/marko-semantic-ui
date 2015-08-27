@@ -3,7 +3,6 @@ function create(__helpers) {
       empty = __helpers.e,
       notEmpty = __helpers.ne,
       escapeXml = __helpers.x,
-      escapeXmlAttr = __helpers.xa,
       attr = __helpers.a;
 
   return function render(data, out) {
@@ -19,25 +18,14 @@ function create(__helpers) {
         '</label>');
     }
 
-    var __strip1 = !(!data.ui);
-
-    if (__strip1) {
-      out.w('<div class="ui ' +
-        escapeXmlAttr(data.ui) +
-        ' input">');
-    }
-
-    out.w('<input' +
-      attr("type", data.type) +
-      attr("value", data.value) +
+    out.w('<textarea' +
       attr("name", data.name) +
       attr("placeholder", data.placeholder) +
-      attr("tab-index", data.tab) +
-      '>');
-
-    if (__strip1) {
-      out.w('</div>');
-    }
+      attr("rows", data.rows) +
+      attr("class", data.ui) +
+      '>' +
+      escapeXml(data.value) +
+      '</textarea>');
 
     if (__strip0) {
       out.w('</div>');

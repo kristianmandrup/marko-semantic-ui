@@ -1,2 +1,4 @@
-textarea(class='$data.ui' name='$data.name' placeholder='$data.placeholder' rows='$data.rows')
-  $data.value
+div(class='field' body-only-if='!data.field')
+  label(if='data.field') $data.field
+  textarea(class='$data.ui' name='$data.name' placeholder='$data.placeholder' rows='$data.rows')
+    $data.value

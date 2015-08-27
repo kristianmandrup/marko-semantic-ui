@@ -1,4 +1,7 @@
 {
-    "@ui": "array",
+    "@ui": "string",
+    "@name": "string",
+    "@field": "string",
+    "@tab": "number",
     "@list": "array"
 }

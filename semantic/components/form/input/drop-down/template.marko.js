@@ -3,8 +3,11 @@ function create(__helpers) {
       empty = __helpers.e,
       notEmpty = __helpers.ne,
       escapeXml = __helpers.x,
+      attr = __helpers.a,
       escapeXmlAttr = __helpers.xa,
-      attr = __helpers.a;
+      __renderer = __helpers.r,
+      ___select_opts_renderer_js = __renderer(require("../select-opts/renderer")),
+      __tag = __helpers.t;
 
   return function render(data, out) {
     var __strip0 = !(!data.field);
@@ -19,25 +22,19 @@ function create(__helpers) {
         '</label>');
     }
 
-    var __strip1 = !(!data.ui);
-
-    if (__strip1) {
-      out.w('<div class="ui ' +
-        escapeXmlAttr(data.ui) +
-        ' input">');
-    }
-
-    out.w('<input' +
-      attr("type", data.type) +
-      attr("value", data.value) +
+    out.w('<select' +
       attr("name", data.name) +
-      attr("placeholder", data.placeholder) +
       attr("tab-index", data.tab) +
-      '>');
+      ' class="ui ' +
+      escapeXmlAttr(data.ui) +
+      ' search dropdown">');
+    __tag(out,
+      ___select_opts_renderer_js,
+      {
+        "list": data.list
+      });
 
-    if (__strip1) {
-      out.w('</div>');
-    }
+    out.w('</select>');
 
     if (__strip0) {
       out.w('</div>');
