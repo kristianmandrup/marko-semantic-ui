@@ -2,45 +2,63 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
+      __renderer = __helpers.r,
+      ___ui_toggle_renderer_js = __renderer(require("../ui-toggle/renderer")),
+      __tag = __helpers.t,
+      ___ui_slider_renderer_js = __renderer(require("../ui-slider/renderer")),
       escapeXmlAttr = __helpers.xa,
       attr = __helpers.a,
       escapeXml = __helpers.x;
 
   return function render(data, out) {
-    var __strip0 = !(!data.field);
-
-    if (__strip0) {
-      out.w('<div class="' +
-        escapeXmlAttr(data.field) +
-        ' field">');
+    if (data.toggle) {
+      __tag(out,
+        ___ui_toggle_renderer_js,
+        data);
     }
 
-    var __strip1 = !(!data.ui);
-
-    if (__strip1) {
-      out.w('<div class="ui ' +
-        escapeXmlAttr(data.ui) +
-        ' checkbox">');
+    if (data.slider) {
+      __tag(out,
+        ___ui_slider_renderer_js,
+        data);
     }
 
-    out.w('<input type="checkbox"' +
-      attr("name", data.name) +
-      attr("checked", data.checked) +
-      attr("tabindex", data.tab) +
-      ' class="hidden">');
+    if (data.default) {
+      var __strip0 = !(!data.field);
 
-    if (data.label) {
-      out.w('<label>' +
-        escapeXml(data.label) +
-        '</label>');
-    }
+      if (__strip0) {
+        out.w('<div class="' +
+          escapeXmlAttr(data.field) +
+          ' field">');
+      }
 
-    if (__strip1) {
-      out.w('</div>');
-    }
+      var __strip1 = !(!data.ui);
 
-    if (__strip0) {
-      out.w('</div>');
+      if (__strip1) {
+        out.w('<div class="ui ' +
+          escapeXmlAttr(data.ui) +
+          ' checkbox">');
+      }
+
+      out.w('<input type="checkbox"' +
+        attr("name", data.name) +
+        attr("checked", data.checked) +
+        attr("tabindex", data.tab) +
+        ' class="hidden">');
+
+      if (data.label) {
+        out.w('<label>' +
+          escapeXml(data.label) +
+          '</label>');
+      }
+
+      if (__strip1) {
+        out.w('</div>');
+      }
+
+      if (__strip0) {
+        out.w('</div>');
+      }
     }
   };
 }
