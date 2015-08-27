@@ -1,1 +1,3 @@
-div(class='ui $data.ui comments' body-or='data.body')
+div(class='ui $data.ui comments' tag-body='')
+  for(each='item in data.list' if='data.list')
+    ui-comment(content='item')

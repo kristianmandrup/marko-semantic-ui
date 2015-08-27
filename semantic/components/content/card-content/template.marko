@@ -1,16 +1,8 @@
 
 <div class="$data.ui content">
-  <if test="$data.icons">
-    <ui-icons list="$data.icons"></ui-icons>
-  </if>
-  <if test="$data.header"><a class="header">$data.header</a></if>
-  <if test="$data.meta">
-    <div class="meta"><span class="date">$data.meta</span></div>
-  </if>
-  <if test="$data.desc">
-    <div class="description">$data.desc</div>
-  </if>
-  <if test="$data.btn">
-    <ui-button attrs="$data.btn"></ui-button>
-  </if>
+  <ui-icons list="$data.icons" if="data.icons"></ui-icons>
+  <div if="data.header" class="header">$data.header</div>
+  <div if="data.data" class="meta"><span class="date">$data.date</span></div>
+  <div if="data.desc" class="description">$data.desc</div>
+  <ui-button attrs="data.btn" if="data.btn"></ui-button>
 </div>

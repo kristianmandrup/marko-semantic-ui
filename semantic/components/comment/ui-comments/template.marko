@@ -1,2 +1,6 @@
 
-<div body-or="data.body" class="ui $data.ui comments"></div>
+<div tag-body="" class="ui $data.ui comments">
+  <for each="item in data.list" if="data.list">
+    <ui-comment content="item"></ui-comment>
+  </for>
+</div>

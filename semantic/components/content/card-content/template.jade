@@ -1,13 +1,8 @@
 div(class='$data.ui content')
-  xif(test='$data.icons')
-    ui-icons(list='$data.icons')
-  xif(test='$data.header')
-    a.header $data.header
-  xif(test='$data.meta')
-    .meta
-      span.date $data.meta
-  xif(test='$data.desc')
-    .description
-      | $data.desc
-  xif(test='$data.btn')
-    ui-button(attrs='$data.btn')
+  ui-icons(list='$data.icons' if='data.icons')
+  div(class='header' if='data.header') $data.header
+  div(class='meta' if='data.data')
+    span.date $data.date
+  div(class='description' if='data.desc')
+    $data.desc
+  ui-button(attrs='data.btn' if='data.btn')

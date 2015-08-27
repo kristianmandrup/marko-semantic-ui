@@ -1,0 +1,8 @@
+
+<div class="content"><a if="data.author" class="author">$data.author</a>
+  <div if="data.meta" class="metadata"><span class="$data.meta.ui">$data.meta.label</span></div>
+  <div body-or="data.text" class="text"></div>
+  <div if="data.actions" class="actions">
+    <for each="action in data.actions"><a class="$action.ui">$action.label</a></for>
+  </div>
+</div>

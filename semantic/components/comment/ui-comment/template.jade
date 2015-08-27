@@ -1,10 +1,3 @@
 div(class='comment $data.ui')
-  avatar-img(attrs='$data.avatar' if='$data.avatar')
-  .content
-    a.author Matt
-    div(class='metadata' if='data.meta')
-      span(class='$data.meta.ui') $data.meta.label
-    div(class='text' body-or='data.body')
-    div(class='actions' if='data.actions')
-      for(each='action in data.actions')
-        a(class='$action.ui') $action.label
+  avatar-img(attrs='data.avatar' if='data.avatar')
+  comment-content(attrs='data.content' if='data.content')
