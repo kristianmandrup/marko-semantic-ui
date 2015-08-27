@@ -34,6 +34,10 @@ Buttons from list data
 
 `radio-btns(list='data.work' name='work')`
 
+#### Checkbox
+
+We have SO many Checkbox variants. We need a separate library!
+
 ### Form
 
 ### Messages
