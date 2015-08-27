@@ -1,5 +1,5 @@
 
-<div class="ui $data.ui checkbox">
+<div body-only-if="!data.ui" class="ui $data.ui checkbox">
   <input type="checkbox" name="$data.name" checked="$data.checked" tabindex="$data.tab" class="hidden">
-  <label>$data.label</label>
+  <label if="data.label">$data.label</label>
 </div>

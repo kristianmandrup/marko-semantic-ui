@@ -9,9 +9,13 @@ function create(__helpers) {
   return function render(data, out) {
     out.w('<div class="' +
       escapeXmlAttr(data.ui) +
-      ' field"><label>' +
-      escapeXml(data.label) +
-      '</label>');
+      ' field">');
+
+    if (data.label) {
+      out.w('<label>' +
+        escapeXml(data.label) +
+        '</label>');
+    }
 
     tagBody(out, data.renderBody);
 
