@@ -32,7 +32,6 @@
     "marko-dynamic-tag": "^0.0.1"
   },
   "devDependencies": {
-    "marooka": "kristianmandrup/markoa#master",
     "gulp": "^3.6.0",
     "require-dir": "^0.3.0",
     "gulp-util": "^3.0.6",
