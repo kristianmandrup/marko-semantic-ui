@@ -1,3 +1,1 @@
-h1(class='ui header' body-or='data.label' if='data.lv == 1')
-h2(class='ui header' body-or='data.label' if='data.lv == 2')
-h3(class='ui header' body-or='data.label' if='data.lv > 2')
+dynamic(class='ui header' tag-name='${data.lv || 1}' body-or='data.label')

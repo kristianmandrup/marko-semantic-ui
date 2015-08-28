@@ -1,2 +1,6 @@
 
-<div body-or="data.body" class="ui $data.ui items"></div>
+<div body-or="data.body" class="ui $data.ui items">
+  <for each="item in data.list">
+    <dynamic tag-name="item.tag"></dynamic>
+  </for>
+</div>

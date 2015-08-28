@@ -1,2 +1,7 @@
 
-<tr body-or=" data.body" class="$data.ui"></tr>
+<tr tag-body="" class="$data.ui">
+  <for each="item in data.list" if="data.list">
+    <col-head attrs="item" if="item.header"></col-head>
+    <tbl-cell attrs="item" else=""></tbl-cell>
+  </for>
+</tr>

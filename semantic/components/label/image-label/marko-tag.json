@@ -1,5 +1,5 @@
 {
     "@ui": "string",
     "@label": "string",
-    "@src": "string"
+    "@image": "object"
 }

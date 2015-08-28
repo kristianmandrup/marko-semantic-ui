@@ -1,16 +1,10 @@
-.item 
-  xif(test='data.label')
+div(class='$data.ui item' body-or='data.content')
+  div(class='label' if='data.label')
     $data.label
-  xif(test='data.icon')
-    ui-icon(attrs='data.icon')
-  xif(test='data.content')
-    .content
-      xif(test='data.link')
-        a(href='$data.link.url') ${data.link.label || data.link.url}
-      xelse
-        xif(test='data.header')
-          a.header $data.header
-        xif(test='data.desc')
-          $data.desc
-        xif(test='data.content')
-          $data.content
+  ui-icon(attrs='data.icon' if='data.icon')
+  div(class='content' if='data.content')
+    a(href='$data.link.url' if='data.link') ${data.link.label || data.link.url}
+    xif(test='!data.link')
+      a(class='header' if='data.header') $data.header
+      div(class='description' if='data.desc')
+        $data.desc

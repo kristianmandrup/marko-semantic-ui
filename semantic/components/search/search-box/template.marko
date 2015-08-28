@@ -1,10 +1,7 @@
 
 <div class="ui $data.ui search">
-  <input type="text" placeholder="${data.placeholder}" class="prompt">
-  <if test="data.icon">
-    <ui-icon attrs="$data.icon"></ui-icon>
-  </if>
-  <if test="data.results">
-    <div class="results">$data.results</div>
-  </if>
+  <txt-input ui="prompt" placeholder="${data.placeholder}">
+    <ui-icon attrs="data.icon" if="data.icon"></ui-icon>
+    <div if="data.results" tag-body="" class="results"></div>
+  </txt-input>
 </div>

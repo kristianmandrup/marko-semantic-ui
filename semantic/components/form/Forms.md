@@ -1,6 +1,20 @@
 Forms
 -----
 
+### Messages
+
+Useful for various data related messages:
+
+-	*success*
+-	*errors*
+-	*notifications*
+-	*warnings*
+-	...
+
+```jade
+ui-message(ui='red' header='Errors' list='data.userForm.errors')
+```
+
 ### Fields
 
 Default: text field

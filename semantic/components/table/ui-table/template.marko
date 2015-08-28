@@ -1,2 +1,8 @@
 
-<table body-or=" data.body" class="ui $data.ui table"></table>
+<table tag-body="" class="ui $data.ui table">
+  <for each="item in data.list" if="data.list">
+    <tbl-header list="item.header" if="item.header"></tbl-header>
+    <tbl-body list="item.body" if="item.body"></tbl-body>
+    <tbl-footer list="item.footer" if="item.footer"></tbl-footer>
+  </for>
+</table>

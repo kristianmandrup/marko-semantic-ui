@@ -19,13 +19,27 @@ TODO: Support label somehow?
 
 ### Single line input
 
+`txt-input(...)`
+
+### Adv input
+
+`adv-input(...)`
+
 ### Multi select
 
+`multi-select(...)`
+
 ### Radio button
+
+`radio-btn(...)`
+
+`radio-btns(...)`
 
 ### Select options
 
 Use in `MultiSelect` and `Dropdown`
+
+`select-opts(...)`
 
 ### Textarea input
 
@@ -33,6 +47,8 @@ Use in `MultiSelect` and `Dropdown`
 
 ### Slider
 
-`ui-slider()`
+`check-slider()`
 
 ### Toggle
+
+`check-toggle()`

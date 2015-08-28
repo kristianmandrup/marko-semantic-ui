@@ -1,1 +1,4 @@
-div(class='ui $data.ui shape' body-or=' data.body')
+div(class='ui $data.ui shape' tag-body='')
+  div(class='sides' tag-body='')
+    for(each='item in data.list' if='data.list')
+      ui-side(attrs='item')

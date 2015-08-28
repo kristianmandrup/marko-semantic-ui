@@ -1,3 +1,5 @@
 {
-    "@label": "string"
+    "@ui": "string",
+    "@loader": "string",
+    "@active": "string"
 }

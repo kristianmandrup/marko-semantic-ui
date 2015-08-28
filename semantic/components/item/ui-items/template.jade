@@ -1,1 +1,3 @@
 div(class='ui $data.ui items' body-or='data.body')
+  for(each='item in data.list')
+    dynamic(tag-name='item.tag')

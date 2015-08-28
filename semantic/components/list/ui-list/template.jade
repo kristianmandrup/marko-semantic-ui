@@ -1,3 +1,6 @@
-.ui.list
-  for(each='item in data.list')
-    ui-item(attrs='item')
+div(class='ui $data.ui list' tag-body='')
+  for(each='item in data.list' if='data.list')
+    icon-item(attrs='item' if='item.icon')
+    link-item(attrs='item' else-if='item.link')
+    image-item(attrs='item' else-if='item.image')
+    ui-item(attrs='item' else='')

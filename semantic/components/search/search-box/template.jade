@@ -1,7 +1,4 @@
 div(class='ui $data.ui search')
-  input.prompt(type='text', placeholder='${data.placeholder}')
-  xif(test='data.icon')
-    ui-icon(attrs='$data.icon')
-  xif(test='data.results')
-    .results
-      $data.results
+  txt-input(ui='prompt' placeholder='${data.placeholder}')
+    ui-icon(attrs='data.icon' if='data.icon')
+    div(class='results' if='data.results' tag-body='')

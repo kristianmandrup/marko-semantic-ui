@@ -1,1 +1,5 @@
-tr(class='$data.ui' body-or=' data.body')
+tr(class='$data.ui' tag-body='')
+  for(each='item in data.list' if='data.list')
+    col-head(attrs='item' if='item.header')
+    tbl-cell(attrs='item' else='')
+  

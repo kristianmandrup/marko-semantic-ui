@@ -1,4 +1,3 @@
 {
-    "@ui": "string",
-    "@body": "string"
+    "@ui": "string"
 }

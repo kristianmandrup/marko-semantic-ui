@@ -1,4 +1,2 @@
 
-<h1 body-or="data.label" if="data.lv == 1" class="ui header"></h1>
-<h2 body-or="data.label" if="data.lv == 2" class="ui header"></h2>
-<h3 body-or="data.label" if="data.lv &gt; 2" class="ui header"></h3>
+<dynamic tag-name="${data.lv || 1}" body-or="data.label" class="ui header"></dynamic>

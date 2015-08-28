@@ -1,6 +1,9 @@
 
-<div class="ui list">
-  <for each="item in data.list">
-    <ui-item attrs="item"></ui-item>
+<div tag-body="" class="ui $data.ui list">
+  <for each="item in data.list" if="data.list">
+    <icon-item attrs="item" if="item.icon"></icon-item>
+    <link-item attrs="item" else-if="item.link"></link-item>
+    <image-item attrs="item" else-if="item.image"></image-item>
+    <ui-item attrs="item" else=""></ui-item>
   </for>
 </div>

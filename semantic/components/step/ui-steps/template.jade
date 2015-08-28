@@ -1,0 +1,4 @@
+div(class='ui $data.ui steps' tag-body='')
+  for(each='item in data.list')
+    link-step(attrs='item' if='item.link')
+    ui-step(attrs='item' else='')

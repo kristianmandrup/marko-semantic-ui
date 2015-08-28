@@ -1,0 +1,7 @@
+
+<div tag-body="" class="ui $data.ui steps">
+  <for each="item in data.list">
+    <link-step attrs="item" if="item.link"></link-step>
+    <ui-step attrs="item" else=""></ui-step>
+  </for>
+</div>

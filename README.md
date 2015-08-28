@@ -3,6 +3,11 @@ marko-semantic-ui-taglibs [![NPM version](https://badge.fury.io/js/marko-semanti
 
 > Marko taglibs for Semantic UI
 
+### TODO
+
+-	Trim down number of tags by using clever logic and conditional magic!
+-	Add Feed tags
+
 Install
 -------
 

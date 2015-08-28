@@ -1,4 +1,3 @@
 {
-    "@ui": "string",
-    "@active": "boolean"
+    "@ui": "string"
 }

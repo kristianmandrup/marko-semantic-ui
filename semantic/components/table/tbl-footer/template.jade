@@ -1,1 +1,3 @@
-tfoot(class='$data.ui' body-or=' data.body')
+tfoot(class='$data.ui' body-or='data.body')
+  for(each='item in data.list' if='data.list')
+    tbl-row(attrs='item')

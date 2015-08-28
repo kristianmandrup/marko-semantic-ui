@@ -1,4 +1,4 @@
 {
-    "@label": "string",
-    "@body": "string"
+    "@list": "array",
+    "@ui": "string"
 }

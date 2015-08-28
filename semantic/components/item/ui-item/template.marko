@@ -1,17 +1,10 @@
 
-<div class="item"> 
-  <if test="data.label">$data.label</if>
-  <if test="data.icon">
-    <ui-icon attrs="data.icon"></ui-icon>
-  </if>
-  <if test="data.content">
-    <div class="content">
-      <if test="data.link"><a href="$data.link.url">${data.link.label || data.link.url}</a></if>
-      <else>
-        <if test="data.header"><a class="header">$data.header</a></if>
-        <if test="data.desc">$data.desc</if>
-        <if test="data.content">$data.content</if>
-      </else>
-    </div>
-  </if>
+<div body-or="data.content" class="$data.ui item">
+  <div if="data.label" class="label">$data.label</div>
+  <ui-icon attrs="data.icon" if="data.icon"></ui-icon>
+  <div if="data.content" class="content"><a href="$data.link.url" if="data.link">${data.link.label || data.link.url}</a>
+    <if test="!data.link"><a if="data.header" class="header">$data.header</a>
+      <div if="data.desc" class="description">$data.desc</div>
+    </if>
+  </div>
 </div>

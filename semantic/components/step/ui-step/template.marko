@@ -1,14 +1,9 @@
 
-<div class="$data.status step">
-  <if test="data.icon">
-    <ui-icon attrs="data.icon"></ui-icon>
-  </if>
-  <div class="content">
-    <if test="data.label">
-      <div class="title">$data.label</div>
-    </if>
-    <if test="data.desc">
-      <div class="description">$data.desc</div>
-    </if>
-  </div>
-</div>
+<dynamic tag-name="$data.tag" class="$data.status step">
+  <ui-icon attrs="data.icon" if="data.icon">
+    <div if="data.hasContent" class="content">
+      <div if="data.label" class="title">$data.label</div>
+      <div if="data.desc" class="description">$data.desc</div>
+    </div>
+  </ui-icon>
+</dynamic>

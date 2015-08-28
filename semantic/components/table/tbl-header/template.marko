@@ -1,2 +1,6 @@
 
-<th body-or=" data.body" class="$data.ui"></th>
+<thead body-or="data.body" class="$data.ui">
+  <for each="item in data.list" if="data.list">
+    <tbl-row attrs="item"></tbl-row>
+  </for>
+</thead>

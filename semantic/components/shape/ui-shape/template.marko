@@ -1,2 +1,8 @@
 
-<div body-or=" data.body" class="ui $data.ui shape"></div>
+<div tag-body="" class="ui $data.ui shape">
+  <div tag-body="" class="sides">
+    <for each="item in data.list" if="data.list">
+      <ui-side attrs="item"></ui-side>
+    </for>
+  </div>
+</div>

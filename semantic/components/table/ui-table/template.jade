@@ -1,1 +1,5 @@
-table(class='ui $data.ui table' body-or=' data.body')
+table(class='ui $data.ui table' tag-body='')
+  for(each='item in data.list' if='data.list')
+    tbl-header(list='item.header' if='item.header')
+    tbl-body(list='item.body' if='item.body')
+    tbl-footer(list='item.footer' if='item.footer')

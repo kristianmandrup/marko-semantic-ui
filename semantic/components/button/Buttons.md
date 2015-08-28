@@ -1,6 +1,10 @@
 Buttons
 -------
 
+### TODO
+
+Simplify!!! Use power conditionals and dynamic tag names :)
+
 ### Ui buttons
 
 `ui-btn(ui='large red' label='warning')`
