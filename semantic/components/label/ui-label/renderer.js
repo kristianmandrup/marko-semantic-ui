@@ -1,8 +1,8 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-    input.isTag = input.tag ? 'tag' : '';
-    input.isRibbon = input.ribbon ? 'ribbon' : '';
-    input.isAttached = input.attached ? 'attached' : '';    
-    template.render(input, out);
+  data.ui = data.ui || '';
+  data.ui += data.image ? ' image' : '';
+  data.tagName = data.image ? ' a' : 'div';
+  template.render(input, out);
 };

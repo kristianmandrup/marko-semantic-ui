@@ -1,10 +1,16 @@
 
-<div body-or="data.content" class="$data.ui item">
+<dynamic tag-name="$data.tagName" body-or="data.content" class="$data.ui item">
+  <if test="data.list || data.dropdown"><i class="dropdown icon"></i>
+    <div if="data.list" class="menu">
+      <for each="item in data.list">
+        <div class="item">$item.label</div>
+      </for>
+    </div>
+  </if>
   <div if="data.label" class="label">$data.label</div>
+  <ui-image attrs="data.image" if="data.image"></ui-image>
   <ui-icon attrs="data.icon" if="data.icon"></ui-icon>
-  <div if="data.content" class="content"><a href="$data.link.url" if="data.link">${data.link.label || data.link.url}</a>
-    <if test="!data.link"><a if="data.header" class="header">$data.header</a>
-      <div if="data.desc" class="description">$data.desc</div>
-    </if>
+  <div if="data.content" class="content"><a href="$data.link.url" if="data.link">${data.link.label || data.link.url}</a><a if="!data.link" class="header">$data.header</a>
+    <div if="data.desc" class="description">$data.desc</div>
   </div>
-</div>
+</dynamic>

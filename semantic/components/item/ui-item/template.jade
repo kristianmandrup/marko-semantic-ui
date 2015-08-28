@@ -1,10 +1,16 @@
-div(class='$data.ui item' body-or='data.content')
+dynamic(tag-name='$data.tagName' class='$data.ui item' body-or='data.content')
+  xif(test='data.list || data.dropdown')
+    i.dropdown.icon
+    div(class='menu' if='data.list')
+      for(each='item in data.list')
+        .item $item.label
+
   div(class='label' if='data.label')
     $data.label
+  ui-image(attrs='data.image' if='data.image')
   ui-icon(attrs='data.icon' if='data.icon')
   div(class='content' if='data.content')
     a(href='$data.link.url' if='data.link') ${data.link.label || data.link.url}
-    xif(test='!data.link')
-      a(class='header' if='data.header') $data.header
-      div(class='description' if='data.desc')
-        $data.desc
+    a(class='header' if='!data.link') $data.header
+    div(class='description' if='data.desc')
+      $data.desc

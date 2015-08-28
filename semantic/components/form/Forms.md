@@ -75,11 +75,11 @@ ui-form
 Or even more tight!
 
 ```jade
-line-input(name='username' field='User name')
+txt-input(name='username' field='User name')
 drop-down(name='coolSkills' list='data.skills' field='Skills')
 multi-select(name='mySkills' list='data.skills' field='Skills')
 check-box(name='male' checked='true' field='Male')
-text-area(name='text' placeholder='Your text' rows='10' field='Text')
+txt-area(name='text' placeholder='Your text' rows='10' field='Text')
 
 check-boxes(list='data.languages' label='Languages')
 radio-btns(list='data.work' name='work')

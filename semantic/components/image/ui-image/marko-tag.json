@@ -1,4 +1,6 @@
 {
     "@src": "string",
+    "@image": "string",
+    "@avatar": "string",
     "@ui": "string"
 }
