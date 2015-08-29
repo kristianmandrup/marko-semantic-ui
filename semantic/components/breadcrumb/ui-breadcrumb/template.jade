@@ -1,5 +1,3 @@
-div(class='ui $data.ui breadcrumb')
-  for(each='item in data.list')
-    a(class='$item.ui section') $item.label
-    ui-icon(attrs='item.icon' ui='divider right' if='item.icon')
-    div(class='divider' if='!item.icon' tag-body='item.body || "/"') 
+div(class='ui $data.ui breadcrumb' tag-body='')
+  for(each='item in data.list' if='data.list')
+    crumb-item(attrs='item')

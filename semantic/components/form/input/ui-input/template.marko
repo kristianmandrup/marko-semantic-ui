@@ -1,0 +1,14 @@
+
+<div body-only-if="!data.field" class="field">
+  <div class="ui $data.ui input">
+    <div body-or="data.label || data.field" class="ui label"></div>
+    <input name="$data.name" type="$data.type" placeholder="$data.placeholder">
+    <ui-icon icon="$data.icon" if="data.icon"></ui-icon>
+    <div if="data.menu" class="menu">
+      <for each="item in data.menu">
+        <div class="item">$item.label</div>
+      </for>
+    </div><a if="data.link" class="ui tag label">$data.link</a>
+    <ui-btn attrs="data.action" if="data.action"></ui-btn>
+  </div>
+</div>

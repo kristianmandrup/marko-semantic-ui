@@ -1,4 +1,8 @@
 
 <div body-only-if="!data.inverted" class="ui inverted segment">
-  <div body-or="data.body" class="ui $data.ui accordion"></div>
+  <div tag-body="" class="ui $data.ui accordion">
+    <for each="item in data.list" if="data.list">
+      <acc-item attrs="item"></acc-item>
+    </for>
+  </div>
 </div>

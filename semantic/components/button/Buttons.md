@@ -1,38 +1,30 @@
 Buttons
 -------
 
-### TODO
+### Basic button
 
-Simplify!!! Use power conditionals and dynamic tag names :)
+`ui-button(ui='large red' label='warning')`
 
-### Ui buttons
+### Link button
 
-`ui-btn(ui='large red' label='warning')`
+`ui-button(ui='large violet' label='go baby!' link='google.com')`
 
-### Group buttons
+### Icon button
+
+`ui-button(ui='large green' label='go baby!' icon='user')`
+
+### Submit buttons
+
+`ui-button(ui='large blue' label='go baby!' type='submit')`
+
+### Group of buttons
 
 ```jade
-group-btn(ui='large')
+ui-buttons(ui='large')
   ui-btn(label='hello')
   ui-btn(label='bye' ui='primary')
 ```
 
-### Link buttons
-
-`link-btn(ui='large violet' label='go baby!' link='google.com')`
-
-### Icon buttons
-
-`icon-btn(ui='large green' label='go baby!' name='user')`
-
 ```jade
-icon-btn(name='user' label='hello')
-
-h3 Group
-icon-group-btn(ui='large')
-  icon-btn(name='user' label='hello')  
+ui-buttons(ui='large' list='data.buttons')
 ```
-
-### Submit buttons
-
-`submit-btn(ui='large blue' label='go baby!')`

@@ -1,2 +1,4 @@
 div(class="ui inverted segment" body-only-if='!data.inverted')
-  div(class='ui $data.ui accordion' body-or='data.body')
+  div(class='ui $data.ui accordion' tag-body='')
+    for(each='item in data.list' if='data.list')
+      acc-item(attrs='item')

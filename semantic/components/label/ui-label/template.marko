@@ -1,5 +1,5 @@
 
-<dynamic tag-name="$data.tagName" tag-body="" class="$data.ui ui label">
+<dynamic tag-name="$data.tagName" body-only-if="data.btn" tag-body="" class="$data.ui ui label">
   <ui-image attrs="data.image" if="data.image"></ui-image>
-  <ui-icon attrs="data.icon" if="data.icon">$data.label</ui-icon>
+  <ui-icon attrs="data.icon" else="data.icon">$data.label</ui-icon>
 </dynamic>

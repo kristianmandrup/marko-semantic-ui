@@ -1,3 +1,3 @@
-dynamic(tag-name='$data.tagName' class='$data.ui ui label' tag-body='')
+dynamic(tag-name='$data.tagName' class='$data.ui ui label' body-only-if='data.btn' tag-body='')
   ui-image(attrs='data.image' if='data.image')
-  ui-icon(attrs='data.icon' if='data.icon') $data.label
+  ui-icon(attrs='data.icon' else='data.icon') $data.label

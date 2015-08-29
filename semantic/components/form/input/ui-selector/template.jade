@@ -1,0 +1,6 @@
+div(class='field' body-only-if='!data.field')
+  label(if='data.field') $data.field
+  select(name='$data.name' class='ui $data.ui dropdown' multiple='' tab-index='$data.tab' if='data.multiple')
+    select-opts(list='data.list')
+  select(name='$data.name' class='ui $data.ui dropdown' multiple='' tab-index='$data.tab' else='')
+    select-opts(list='data.list')

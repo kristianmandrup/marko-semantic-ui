@@ -1,6 +1,8 @@
 Inputs
 ------
 
+TODO: Combine `multi-select` and `drop-down`
+
 ### Checkbox
 
 Create a pre-checked checkbox for `male` gender.

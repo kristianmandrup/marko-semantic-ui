@@ -1,7 +1,0 @@
-{
-    "@ui": "string",
-    "@icon": "string",
-    "@action": "string",
-    "@link": "string",
-    "@menu": "object"
-}

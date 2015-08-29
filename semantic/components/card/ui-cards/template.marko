@@ -1,2 +1,6 @@
 
-<div tag-body="" class="ui $data.ui cards"></div>
+<div tag-body="" class="ui $data.ui cards">
+  <for each="item in data.list" if="data.list">
+    <ui-card attrs="item"></ui-card>
+  </for>
+</div>

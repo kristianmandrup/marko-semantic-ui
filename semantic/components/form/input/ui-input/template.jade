@@ -1,0 +1,10 @@
+div(class='field' body-only-if='!data.field')
+  div(class='ui $data.ui input')
+    div(class='ui label' body-or='data.label || data.field')
+    input(name='$data.name' type='$data.type', placeholder='$data.placeholder')
+    ui-icon(icon='$data.icon' if='data.icon')
+    div(class='menu' if='data.menu')
+      for(each='item in data.menu')
+        .item $item.label
+    a(class='ui tag label' if='data.link') $data.link
+    ui-btn(attrs='data.action' if='data.action')
