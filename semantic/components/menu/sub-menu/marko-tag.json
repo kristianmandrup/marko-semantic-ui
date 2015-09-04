@@ -1,4 +1,5 @@
 {
     "@ui": "string",
+    "@header": "object",
     "@list": "array"
 }
