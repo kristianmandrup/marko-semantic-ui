@@ -1,0 +1,5 @@
+{
+  "taglib-imports": [
+    "./paypal/marko-taglib.json"
+  ]
+}
