@@ -1,0 +1,7 @@
+.four.wide.column
+  h5.ui.teal.inverted.header Contribute
+  .ui.inverted.link.list
+    for(each='item in data.list')    
+      a(class='item disabled' if='item.active') $item.label
+      a(class='item' href='$item.link', target='$item.target' else='') $item.label
+      
