@@ -1,5 +1,5 @@
 {
     "@label": "string",
     "@ui": "string",
-    "@btn": "boolean",
+    "@btn": "boolean"
 }

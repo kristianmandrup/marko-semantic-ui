@@ -3,9 +3,9 @@ function create(__helpers) {
       empty = __helpers.e,
       notEmpty = __helpers.ne,
       __renderer = __helpers.r,
-      ___ui_toggle_renderer_js = __renderer(require("../ui-toggle/renderer")),
+      ___check_toggle_renderer_js = __renderer(require("../check-toggle/renderer")),
       __tag = __helpers.t,
-      ___ui_slider_renderer_js = __renderer(require("../ui-slider/renderer")),
+      ___check_slider_renderer_js = __renderer(require("../check-slider/renderer")),
       escapeXmlAttr = __helpers.xa,
       attr = __helpers.a,
       escapeXml = __helpers.x;
@@ -13,13 +13,13 @@ function create(__helpers) {
   return function render(data, out) {
     if (data.toggle) {
       __tag(out,
-        ___ui_toggle_renderer_js,
+        ___check_toggle_renderer_js,
         data);
     }
 
     if (data.slider) {
       __tag(out,
-        ___ui_slider_renderer_js,
+        ___check_slider_renderer_js,
         data);
     }
 
