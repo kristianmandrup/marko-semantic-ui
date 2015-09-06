@@ -3,7 +3,8 @@ function create(__helpers) {
       empty = __helpers.e,
       notEmpty = __helpers.ne,
       attr = __helpers.a,
-      escapeXmlAttr = __helpers.xa;
+      escapeXmlAttr = __helpers.xa,
+      escapeXml = __helpers.x;
 
   return function render(data, out) {
     if (data.tip) {
@@ -13,15 +14,18 @@ function create(__helpers) {
         escapeXmlAttr(data.ui) +
         ' ' +
         escapeXmlAttr(data.name) +
-        ' icon"></i>');
+        ' icon">' +
+        escapeXml(data.label) +
+        '</i>');
     }
-
-    if (!data.tip) {
+    else {
       out.w('<i class="' +
         escapeXmlAttr(data.ui) +
         ' ' +
         escapeXmlAttr(data.name) +
-        ' icon"></i>');
+        ' icon">' +
+        escapeXml(data.label) +
+        '</i>');
     }
   };
 }

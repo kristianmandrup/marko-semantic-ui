@@ -6,5 +6,6 @@
     "@type": "string",
     "@image": "string",
     "@icon": "string",
+    "@transition": "string",
     "@animated": "boolean"
 }

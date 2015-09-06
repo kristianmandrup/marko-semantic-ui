@@ -1,10 +1,8 @@
 a(class='ui $data.ui button' href='$data.link' body-or='data.label' if='data.link')
-  ui-label(attrs='data') 
-
+  ui-label(attrs='data.link') 
 div(class='ui $data.ui animated button' else-if='data.animated')
   div(class='visible content' body-or='data.label') 
   .hidden.content
     ui-icon(attrs='data.icon')
-
-button(class='ui $data.ui button' type='$data.type' body-ior='data.label' else='')
+button(class='ui $data.ui button' type='$data.type' tag-body='' else='')
   ui-label(attrs='data') 

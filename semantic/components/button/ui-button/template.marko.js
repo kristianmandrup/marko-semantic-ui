@@ -19,7 +19,7 @@ function create(__helpers) {
         ' button">');
       __tag(out,
         ______label_ui_label_renderer_js,
-        data,
+        data.link,
         function(out) {
           out.w(' ');
         });
@@ -55,7 +55,7 @@ function create(__helpers) {
           out.w(' ');
         });
 
-      tagBody(out, data.renderBody || data.label);
+      tagBody(out, data.renderBody);
 
       out.w('</button>');
     }

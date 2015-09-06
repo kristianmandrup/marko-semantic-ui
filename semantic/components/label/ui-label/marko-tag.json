@@ -1,5 +1,7 @@
 {
     "@label": "string",
+    "@icon": "object",
+    "@image": "object",
     "@ui": "string",
     "@btn": "boolean"
 }

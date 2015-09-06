@@ -1,6 +1,8 @@
 Buttons
 -------
 
+`icon='data.icon' image='data.image' label='$data.label'`
+
 ### Basic button
 
 `ui-button(ui='large red' label='warning')`
