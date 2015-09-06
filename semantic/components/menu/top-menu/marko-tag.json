@@ -1,3 +1,6 @@
 {
-    "@tabs": "array"
+    "@ui": "string",
+    "@menu": "object",
+    "@main": "object",
+    "@session": "object"
 }

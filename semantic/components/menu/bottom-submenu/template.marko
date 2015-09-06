@@ -1,0 +1,7 @@
+
+<div class="four wide column">
+  <h5 class="ui teal inverted header">Contribute</h5>
+  <div class="ui inverted link list">
+    <for each="item in data.list">   <a if="item.active" class="item disabled">$item.label</a><a href="$item.link" target="$item.target" else="" class="item">$item.label</a></for>
+  </div>
+</div>

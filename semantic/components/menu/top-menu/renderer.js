@@ -1,8 +1,9 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-    // var tabs = input.tabs;
-    template.render({
-        // tabs: tabs
-    }, out);
+    if (input.menu) {
+      input.main = input.menu.main;
+      input.session = input.menu.session;
+    }
+    template.render(input, out);
 };
