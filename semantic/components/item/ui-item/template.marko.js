@@ -2,7 +2,6 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
-      attr = __helpers.a,
       escapeXmlAttr = __helpers.xa,
       forEach = __helpers.f,
       escapeXml = __helpers.x,
@@ -10,11 +9,12 @@ function create(__helpers) {
       ______image_ui_image_renderer_js = __renderer(require("../../image/ui-image/renderer")),
       __tag = __helpers.t,
       ______icon_ui_icon_renderer_js = __renderer(require("../../icon/ui-icon/renderer")),
+      attr = __helpers.a,
       tagBody = require("marko-tag-body/src/tag-body-helper");
 
   return function render(data, out) {
-    out.w('<dynamic' +
-      attr("tag-name", data.tagName) +
+    out.w('<' +
+      data.tagName +
       ' class="' +
       escapeXmlAttr(data.ui) +
       ' item">');
@@ -81,7 +81,9 @@ function create(__helpers) {
 
     tagBody(out, data.content || data.renderBody);
 
-    out.w('</dynamic>');
+    out.w('</' +
+      data.tagName +
+      '>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

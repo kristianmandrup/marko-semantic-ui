@@ -5,7 +5,7 @@ function create(__helpers) {
       __renderer = __helpers.r,
       ______item_ui_item_renderer_js = __renderer(require("../../item/ui-item/renderer")),
       __tag = __helpers.t,
-      ______header_ui_header_renderer_js = __renderer(require("../../header/ui-header/renderer")),
+      escapeXml = __helpers.x,
       ___ui_menu_renderer_js = __renderer(require("../ui-menu/renderer"));
 
   return function render(data, out) {
@@ -15,13 +15,13 @@ function create(__helpers) {
         "ui": data.ui
       },
       function(out) {
-        __tag(out,
-          ______header_ui_header_renderer_js,
-          $data.header);
+        out.w('<div class="header">' +
+          escapeXml(data.header) +
+          '</div>');
         __tag(out,
           ___ui_menu_renderer_js,
           {
-            "list": data.list
+            "list": data.menu
           });
       });
   };

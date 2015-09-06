@@ -1,5 +1,4 @@
 {
-    "@label": "string",
     "@list": "array",
     "@ui": "string"
 }

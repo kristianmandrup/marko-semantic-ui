@@ -1,9 +1,12 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-    if (input.menu) {
-      input.main = input.menu.main;
-      input.session = input.menu.session;
-    }
-    template.render(input, out);
+  input.main = input.main || {};
+  input.session = input.session || {};
+  if (input.menu) {
+    input.main.list = input.menu.main;
+    input.session.list = input.menu.session;
+  }
+  // console.log('top', input);
+  template.render(input, out);
 };

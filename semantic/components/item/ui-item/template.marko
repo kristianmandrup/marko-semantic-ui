@@ -1,5 +1,5 @@
 
-<dynamic tag-name="$data.tagName" body-or="data.content" class="$data.ui item">
+<html-element tag-name="$data.tagName" body-or="data.content" class="$data.ui item">
   <if test="data.list || data.dropdown"><i class="dropdown icon"></i>
     <div if="data.list" class="menu">
       <for each="item in data.list">
@@ -13,4 +13,4 @@
   <div if="data.content" class="content"><a href="$data.link.url" if="data.link">${data.link.label || data.link.url}</a><a if="!data.link" class="header">$data.header</a>
     <div if="data.desc" class="description">$data.desc</div>
   </div>
-</dynamic>
+</html-element>

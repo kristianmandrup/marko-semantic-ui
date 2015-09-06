@@ -4,7 +4,9 @@ function create(__helpers) {
       notEmpty = __helpers.ne,
       escapeXmlAttr = __helpers.xa,
       forEach = __helpers.f,
-      attrs = __helpers.as;
+      __renderer = __helpers.r,
+      ______item_link_item_renderer_js = __renderer(require("../../item/link-item/renderer")),
+      __tag = __helpers.t;
 
   return function render(data, out) {
     out.w('<div class="ui ' +
@@ -12,9 +14,9 @@ function create(__helpers) {
       ' container">');
 
     forEach(data.list, function(item) {
-      out.w('<link-item' +
-        attrs(item) +
-        '></link-item>');
+      __tag(out,
+        ______item_link_item_renderer_js,
+        item);
     });
 
     out.w('</div>');

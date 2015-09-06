@@ -1,4 +1,4 @@
-dynamic(tag-name='$data.tagName' class='$data.ui item' body-or='data.content')
+html-element(tag-name='$data.tagName' class='$data.ui item' body-or='data.content')
   xif(test='data.list || data.dropdown')
     i.dropdown.icon
     div(class='menu' if='data.list')

@@ -5,7 +5,7 @@ function create(__helpers) {
       escapeXmlAttr = __helpers.xa,
       forEach = __helpers.f,
       __renderer = __helpers.r,
-      ______item_ui_item_renderer_js = __renderer(require("../../item/ui-item/renderer")),
+      ______item_link_item_renderer_js = __renderer(require("../../item/link-item/renderer")),
       __tag = __helpers.t,
       tagBody = require("marko-tag-body/src/tag-body-helper");
 
@@ -16,7 +16,7 @@ function create(__helpers) {
 
     forEach(data.list, function(item) {
       __tag(out,
-        ______item_ui_item_renderer_js,
+        ______item_link_item_renderer_js,
         item);
     });
 

@@ -16,13 +16,13 @@ function create(__helpers) {
     if (data.main) {
       __tag(out,
         ___main_menu_renderer_js,
-        $data.main);
+        data.main);
     }
 
     if (data.session) {
       __tag(out,
         ___session_menu_renderer_js,
-        $data.session);
+        data.session);
     }
 
     out.w('</div>');
