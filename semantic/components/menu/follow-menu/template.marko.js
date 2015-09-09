@@ -11,7 +11,9 @@ function create(__helpers) {
   return function render(data, out) {
     out.w('<div class="ui ' +
       escapeXmlAttr(data.ui) +
-      ' large top fixed hidden menu">');
+      ' large top fixed hidden menu"><div class="ui ' +
+      escapeXmlAttr(data.ui) +
+      ' container">');
 
     if (data.main) {
       __tag(out,
@@ -27,7 +29,7 @@ function create(__helpers) {
         data.session);
     }
 
-    out.w('</div></div>');
+    out.w('</div></div></div>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

@@ -1,4 +1,5 @@
 div(class='ui $data.ui large top fixed hidden menu')
-  main-menu(attrs='data.main' if='data.main')
-  .right.menu  
-    session-menu(attrs='data.session' if='data.session')
+  div(class='ui $data.ui container')
+    main-menu(attrs='data.main' if='data.main')
+    .right.menu  
+      session-menu(attrs='data.session' if='data.session')
