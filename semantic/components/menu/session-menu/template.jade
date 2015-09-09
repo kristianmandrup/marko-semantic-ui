@@ -1,3 +1,4 @@
-div(class='ui $data.ui menu')
+div(class='ui $data.ui right menu')
   for(each='item in data.list')
-    link-item(attrs='item')
+    .item
+      a(href='$item.link' class='ui button') $item.label

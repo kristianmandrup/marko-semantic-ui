@@ -18,10 +18,11 @@ function create(__helpers) {
     if (data.main) {
       __tag(out,
         ___main_menu_renderer_js,
-        data.main);
+        data.main,
+        function(out) {
+          out.w(' ');
+        });
     }
-
-    out.w('<div class="right menu"> ');
 
     if (data.session) {
       __tag(out,
@@ -29,7 +30,7 @@ function create(__helpers) {
         data.session);
     }
 
-    out.w('</div></div></div>');
+    out.w('</div></div>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

@@ -4,19 +4,20 @@ function create(__helpers) {
       notEmpty = __helpers.ne,
       escapeXmlAttr = __helpers.xa,
       forEach = __helpers.f,
-      __renderer = __helpers.r,
-      ______item_link_item_renderer_js = __renderer(require("../../item/link-item/renderer")),
-      __tag = __helpers.t;
+      attr = __helpers.a,
+      escapeXml = __helpers.x;
 
   return function render(data, out) {
     out.w('<div class="ui ' +
       escapeXmlAttr(data.ui) +
-      ' menu">');
+      ' right menu">');
 
     forEach(data.list, function(item) {
-      __tag(out,
-        ______item_link_item_renderer_js,
-        item);
+      out.w('<div class="item"><a' +
+        attr("href", item.link) +
+        ' class="ui button">' +
+        escapeXml(item.label) +
+        '</a></div>');
     });
 
     out.w('</div>');

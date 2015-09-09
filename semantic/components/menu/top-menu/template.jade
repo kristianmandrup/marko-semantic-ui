@@ -1,7 +1,7 @@
 div(class='ui $data.ui large secondary inverted pointing menu')
   a.toc.item
     i.sidebar.icon
-  main-menu(attrs='data.menu.main' if='data.menu.main')
+  main-menu(list='data.menu.main' if='data.menu.main')
   div(class='right menu' if='data.menu.session')
     for(each='item in data.menu.session')
       a.ui.inverted.button(href='$item.link') $item.label

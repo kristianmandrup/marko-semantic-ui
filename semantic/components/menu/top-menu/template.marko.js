@@ -18,7 +18,9 @@ function create(__helpers) {
     if (data.menu.main) {
       __tag(out,
         ___main_menu_renderer_js,
-        data.menu.main);
+        {
+          "list": data.menu.main
+        });
     }
 
     if (data.menu.session) {
