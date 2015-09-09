@@ -24,7 +24,7 @@ function create(__helpers) {
     }
 
     if (data.menu.session) {
-      out.w('<div class="right menu">');
+      out.w('<div class="right item">');
 
       forEach(data.menu.session, function(item) {
         out.w('<a' +

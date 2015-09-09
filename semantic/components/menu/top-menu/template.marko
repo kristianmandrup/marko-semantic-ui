@@ -1,7 +1,7 @@
 
 <div class="ui $data.ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a>
   <main-menu list="data.menu.main" if="data.menu.main"></main-menu>
-  <div if="data.menu.session" class="right menu">
+  <div if="data.menu.session" class="right item">
     <for each="item in data.menu.session"><a href="$item.link" class="ui inverted button">$item.label</a></for>
   </div>
 </div>
