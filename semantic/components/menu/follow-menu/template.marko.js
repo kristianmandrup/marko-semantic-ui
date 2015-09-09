@@ -6,14 +6,12 @@ function create(__helpers) {
       __renderer = __helpers.r,
       ___main_menu_renderer_js = __renderer(require("../main-menu/renderer")),
       __tag = __helpers.t,
-      forEach = __helpers.f,
-      attr = __helpers.a,
-      escapeXml = __helpers.x;
+      ___session_menu_renderer_js = __renderer(require("../session-menu/renderer"));
 
   return function render(data, out) {
     out.w('<div class="ui ' +
       escapeXmlAttr(data.ui) +
-      ' large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a>');
+      ' large top fixed hidden menu">');
 
     if (data.main) {
       __tag(out,
@@ -21,21 +19,15 @@ function create(__helpers) {
         data.main);
     }
 
-    if (data.main) {
-      out.w('<div class="right menu">');
+    out.w('<div class="right menu"> ');
 
-      forEach(data.session, function(item) {
-        out.w('<a' +
-          attr("href", item.link) +
-          ' class="ui inverted button">' +
-          escapeXml(item.label) +
-          '</a>');
-      });
-
-      out.w('</div>');
+    if (data.session) {
+      __tag(out,
+        ___session_menu_renderer_js,
+        data.session);
     }
 
-    out.w('</div>');
+    out.w('</div></div>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

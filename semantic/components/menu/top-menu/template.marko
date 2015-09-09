@@ -1,5 +1,7 @@
 
-<div class="ui $data.ui large top fixed hidden menu">
+<div class="ui $data.ui large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a>
   <main-menu attrs="data.main" if="data.main"></main-menu>
-  <session-menu attrs="data.session" if="data.session"></session-menu>
+  <div if="data.main" class="right menu">
+    <for each="item in data.session"><a href="$item.link" class="ui inverted button">$item.label</a></for>
+  </div>
 </div>

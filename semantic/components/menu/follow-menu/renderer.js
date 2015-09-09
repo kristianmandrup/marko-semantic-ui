@@ -7,6 +7,6 @@ exports.renderer = function(input, out) {
     input.main.list = input.menu.main;
     input.session.list = input.menu.session;
   }
-  console.log('top-menu', input);
+  // console.log('top', input);
   template.render(input, out);
 };
