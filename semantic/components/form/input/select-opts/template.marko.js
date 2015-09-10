@@ -8,11 +8,20 @@ function create(__helpers) {
 
   return function render(data, out) {
     forEach(data.list, function(item) {
-      out.w('<option' +
-        attr("value", item.value) +
-        '>' +
-        escapeXml(item.label) +
-        '</option>');
+      if (item.isSelected) {
+        out.w('<option' +
+          attr("value", item.value) +
+          ' selected>' +
+          escapeXml(item.label) +
+          '</option>');
+      }
+      else {
+        out.w('<option' +
+          attr("value", item.value) +
+          '>' +
+          escapeXml(item.label) +
+          '</option>');
+      }
     });
   };
 }

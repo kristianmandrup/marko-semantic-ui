@@ -1,10 +1,9 @@
 {
-    "@ui": "string",
     "@field": "string",
+    "@ui": "string",
     "@label": "string",
     "@name": "string",
     "@placeholder": "string",
-    "@ui": "string",
     "@value": "string",
     "@rows": "number"
 }

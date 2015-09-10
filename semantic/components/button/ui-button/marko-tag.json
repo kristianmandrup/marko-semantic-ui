@@ -3,6 +3,7 @@
     "@link": "string",
     "@label": "string",
     "@name": "string",
+    "@field": "string",
     "@type": "string",
     "@image": "string",
     "@icon": "string",

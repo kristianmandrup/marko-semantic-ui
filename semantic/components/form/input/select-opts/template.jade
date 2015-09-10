@@ -1,2 +1,6 @@
 for(each='item in data.list')
-  option(value='$item.value') $item.label
+  option(value='$item.value' selected='' if='item.isSelected') $item.label
+  option(value='$item.value' else='') $item.label
+
+  
+  

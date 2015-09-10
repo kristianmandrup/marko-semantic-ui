@@ -1,6 +1,6 @@
-div(class='field' body-only-if='!data.field')
-  label(if='data.field') $data.field
+div(class='$data.field field' body-only-if='!data.fieldWrap')
+  label(if='data.label') $data.label
   select(name='$data.name' class='ui $data.ui dropdown' multiple='' tab-index='$data.tab' if='data.multiple')
-    select-opts(list='data.list')
-  select(name='$data.name' class='ui $data.ui dropdown' multiple='' tab-index='$data.tab' else='')
-    select-opts(list='data.list')
+    select-opts(list='data.selectOpts')
+  select(name='$data.name' class='ui $data.ui dropdown' tab-index='$data.tab' else='')
+    select-opts(list='data.selectOpts')

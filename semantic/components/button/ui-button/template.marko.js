@@ -2,15 +2,24 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
-      attr = __helpers.a,
       escapeXmlAttr = __helpers.xa,
+      attr = __helpers.a,
       __renderer = __helpers.r,
       ______label_ui_label_renderer_js = __renderer(require("../../label/ui-label/renderer")),
       __tag = __helpers.t,
       tagBody = require("marko-tag-body/src/tag-body-helper"),
-      ______icon_ui_icon_renderer_js = __renderer(require("../../icon/ui-icon/renderer"));
+      ______icon_ui_icon_renderer_js = __renderer(require("../../icon/ui-icon/renderer")),
+      escapeXml = __helpers.x;
 
   return function render(data, out) {
+    var __strip0 = !(!data.fieldWrap);
+
+    if (__strip0) {
+      out.w('<div class="' +
+        escapeXmlAttr(data.field) +
+        ' field">');
+    }
+
     if (data.link) {
       out.w('<a' +
         attr("href", data.link) +
@@ -42,6 +51,22 @@ function create(__helpers) {
 
       out.w('</div></div>');
     }
+    else if (data.icon) {
+      out.w('<button' +
+        attr("type", data.type) +
+        ' class="ui ' +
+        escapeXmlAttr(data.ui) +
+        ' button">');
+      __tag(out,
+        ______icon_ui_icon_renderer_js,
+        data.icon);
+
+      out.w(escapeXml(data.label));
+
+      tagBody(out, data.renderBody);
+
+      out.w('</button>');
+    }
     else {
       out.w('<button' +
         attr("type", data.type) +
@@ -50,14 +75,15 @@ function create(__helpers) {
         ' button">');
       __tag(out,
         ______label_ui_label_renderer_js,
-        data,
-        function(out) {
-          out.w(' ');
-        });
+        data);
 
       tagBody(out, data.renderBody);
 
       out.w('</button>');
+    }
+
+    if (__strip0) {
+      out.w('</div>');
     }
   };
 }

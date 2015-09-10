@@ -1,6 +1,6 @@
 check-toggle(attrs='data' if='data.toggle')
 check-slider(attrs='data' if='data.slider')
-div(class='$data.field field' body-only-if='!data.field' if='data.default')
+div(class='$data.field field' body-only-if='!data.fieldWrap' if='data.default')
   div(class='ui $data.ui checkbox' body-only-if='!data.ui')
     input.hidden(type='checkbox' name='$data.name' checked='$data.checked' tabindex='$data.tab')
     label(if='data.label') $data.label

@@ -1,11 +1,16 @@
-<a href="$data.link" body-or="data.label" if="data.link" class="ui $data.ui button">
-  <ui-label attrs="data.link"> </ui-label></a>
-<div else-if="data.animated" class="ui $data.ui animated button">
-  <div body-or="data.label" class="visible content"> </div>
-  <div class="hidden content">
-    <ui-icon attrs="data.icon"></ui-icon>
+
+<div body-only-if="!data.fieldWrap" class="$data.field field"><a href="$data.link" body-or="data.label" if="data.link" class="ui $data.ui button">
+    <ui-label attrs="data.link"> </ui-label></a>
+  <div else-if="data.animated" class="ui $data.ui animated button">
+    <div body-or="data.label" class="visible content"> </div>
+    <div class="hidden content">
+      <ui-icon attrs="data.icon"></ui-icon>
+    </div>
   </div>
+  <button type="$data.type" tag-body="" else-if="data.icon" class="ui $data.ui button">
+    <ui-icon attrs="data.icon"></ui-icon>$data.label
+  </button>
+  <button type="$data.type" tag-body="" else="" class="ui $data.ui button">
+    <ui-label attrs="data"></ui-label>
+  </button>
 </div>
-<button type="$data.type" tag-body="" else="" class="ui $data.ui button">
-  <ui-label attrs="data"> </ui-label>
-</button>

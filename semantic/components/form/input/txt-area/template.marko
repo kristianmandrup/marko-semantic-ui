@@ -1,5 +1,5 @@
 
-<div body-only-if="!data.field" class="field">
-  <label if="data.field">$data.field</label>
+<div body-only-if="!data.fieldWrap" class="$data.field field">
+  <label if="data.label">$data.label</label>
   <textarea name="$data.name" placeholder="$data.placeholder" rows="$data.rows" class="$data.ui">$data.value</textarea>
 </div>

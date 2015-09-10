@@ -1,7 +1,7 @@
 
 <check-toggle attrs="data" if="data.toggle"></check-toggle>
 <check-slider attrs="data" if="data.slider"></check-slider>
-<div body-only-if="!data.field" if="data.default" class="$data.field field">
+<div body-only-if="!data.fieldWrap" if="data.default" class="$data.field field">
   <div body-only-if="!data.ui" class="ui $data.ui checkbox">
     <input type="checkbox" name="$data.name" checked="$data.checked" tabindex="$data.tab" class="hidden">
     <label if="data.label">$data.label</label>

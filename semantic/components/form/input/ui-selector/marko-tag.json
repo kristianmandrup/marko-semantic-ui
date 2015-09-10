@@ -2,6 +2,9 @@
     "@ui": "string",
     "@name": "string",
     "@field": "string",
+    "@label": "string",
     "@tab": "number",
-    "@list": "array"
+    "@list": "array",
+    "@refList": "array",
+    "@multiple": "boolean"
 }
