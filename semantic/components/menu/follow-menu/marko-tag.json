@@ -1,6 +1,7 @@
 {
     "@ui": "string",
     "@menu": "object",
+    "@menus": "object",
     "@main": "object",
     "@session": "object"
 }

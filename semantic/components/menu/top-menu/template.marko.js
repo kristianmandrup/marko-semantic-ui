@@ -15,18 +15,18 @@ function create(__helpers) {
       escapeXmlAttr(data.ui) +
       ' large secondary inverted pointing menu"><a class="toc item"><i class="sidebar icon"></i></a>');
 
-    if (data.menu.main) {
+    if (data.main) {
       __tag(out,
         ___main_menu_renderer_js,
         {
-          "list": data.menu.main
+          "menu": data.main
         });
     }
 
-    if (data.menu.session) {
+    if (data.session) {
       out.w('<div class="right item">');
 
-      forEach(data.menu.session, function(item) {
+      forEach(data.session, function(item) {
         out.w('<a' +
           attr("href", item.link) +
           ' class="ui inverted button">' +

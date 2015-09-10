@@ -18,7 +18,9 @@ function create(__helpers) {
     if (data.main) {
       __tag(out,
         ___main_menu_renderer_js,
-        data.main,
+        {
+          "menu": data.main
+        },
         function(out) {
           out.w(' ');
         });
@@ -27,7 +29,9 @@ function create(__helpers) {
     if (data.session) {
       __tag(out,
         ___session_menu_renderer_js,
-        data.session);
+        {
+          "menu": data.session
+        });
     }
 
     out.w('</div></div>');

@@ -8,7 +8,7 @@ function create(__helpers) {
       __tag = __helpers.t;
 
   return function render(data, out) {
-    forEach(data.list, function(item) {
+    forEach(data.menu, function(item) {
       __tag(out,
         ______item_link_item_renderer_js,
         item);

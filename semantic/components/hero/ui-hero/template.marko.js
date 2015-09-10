@@ -3,24 +3,18 @@ function create(__helpers) {
       empty = __helpers.e,
       notEmpty = __helpers.ne,
       escapeXmlAttr = __helpers.xa,
-      forEach = __helpers.f,
-      attr = __helpers.a,
       escapeXml = __helpers.x;
 
   return function render(data, out) {
     out.w('<div class="ui ' +
       escapeXmlAttr(data.ui) +
-      ' right menu">');
-
-    forEach(data.menu, function(item) {
-      out.w('<div class="item"><a' +
-        attr("href", item.link) +
-        ' class="ui button">' +
-        escapeXml(item.label) +
-        '</a></div>');
-    });
-
-    out.w('</div>');
+      ' text container"><h1 class="ui inverted header">' +
+      escapeXml(data.title) +
+      '</h1><h2>' +
+      escapeXml(data.caption) +
+      '</h2><div class="ui huge primary button">' +
+      escapeXml(data.button) +
+      '<i class="right arrow icon"></i></div></div>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);
