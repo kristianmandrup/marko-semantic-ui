@@ -1,6 +1,7 @@
 
 <div tag-body="" class="$data.ui menu">
   <for each="item in data.list">
-    <link-item attrs="item"></link-item>
+    <logo-item attrs="item" if="item.logo"></logo-item>
+    <menu-item attrs="item" else=""></menu-item>
   </for>
 </div>

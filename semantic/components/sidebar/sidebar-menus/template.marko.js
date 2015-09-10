@@ -6,15 +6,23 @@ function create(__helpers) {
       __renderer = __helpers.r,
       ______menu_sub_menu_renderer_js = __renderer(require("../../menu/sub-menu/renderer")),
       __tag = __helpers.t,
-      __extend = __helpers.xt;
+      __extend = __helpers.xt,
+      ______menu_menu_item_renderer_js = __renderer(require("../../menu/menu-item/renderer"));
 
   return function render(data, out) {
     forEach(data.menus, function(item) {
-      __tag(out,
-        ______menu_sub_menu_renderer_js,
-        __extend(__extend({}, item), {
-          "sidebar": true
-        }));
+      if (item.menu) {
+        __tag(out,
+          ______menu_sub_menu_renderer_js,
+          __extend(__extend({}, item), {
+            "sidebar": true
+          }));
+      }
+      else {
+        __tag(out,
+          ______menu_menu_item_renderer_js,
+          item);
+      }
     });
   };
 }

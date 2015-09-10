@@ -1,4 +1,5 @@
 
 <for each="item in data.menus">
-  <sub-menu attrs="item" sidebar="true"></sub-menu>
+  <sub-menu attrs="item" sidebar="true" if="item.menu"></sub-menu>
+  <menu-item attrs="item" else=""></menu-item>
 </for>

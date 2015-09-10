@@ -1,2 +1,3 @@
 for(each='item in data.menus')
-  sub-menu(attrs='item' sidebar='true')
+  sub-menu(attrs='item' sidebar='true' if='item.menu')
+  menu-item(attrs='item' else='')

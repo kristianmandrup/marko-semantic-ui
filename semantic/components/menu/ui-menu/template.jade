@@ -1,3 +1,4 @@
 div(class='$data.ui menu' tag-body='')
   for(each='item in data.list')
-    link-item(attrs='item')
+    logo-item(attrs='item' if='item.logo')
+    menu-item(attrs='item' else='')

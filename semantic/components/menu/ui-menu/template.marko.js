@@ -5,8 +5,9 @@ function create(__helpers) {
       escapeXmlAttr = __helpers.xa,
       forEach = __helpers.f,
       __renderer = __helpers.r,
-      ______item_link_item_renderer_js = __renderer(require("../../item/link-item/renderer")),
+      ______item_logo_item_renderer_js = __renderer(require("../../item/logo-item/renderer")),
       __tag = __helpers.t,
+      ___menu_item_renderer_js = __renderer(require("../menu-item/renderer")),
       tagBody = require("marko-tag-body/src/tag-body-helper");
 
   return function render(data, out) {
@@ -15,9 +16,16 @@ function create(__helpers) {
       ' menu">');
 
     forEach(data.list, function(item) {
-      __tag(out,
-        ______item_link_item_renderer_js,
-        item);
+      if (item.logo) {
+        __tag(out,
+          ______item_logo_item_renderer_js,
+          item);
+      }
+      else {
+        __tag(out,
+          ___menu_item_renderer_js,
+          item);
+      }
     });
 
     tagBody(out, data.renderBody);

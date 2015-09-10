@@ -1,1 +1,7 @@
-div(class='$data.ui item' body-or=' data.body')
+html-element(tag-name='$data.tagName' class='$data.ui item' body-or='data.content')
+  div(class='menu' if='data.list')
+    for(each='item in data.list')
+      menu-item(attrs='item')
+  ui-image(attrs='data.image' if='data.image')
+  ui-icon(attrs='data.icon' if='data.icon')
+  | $data.label
