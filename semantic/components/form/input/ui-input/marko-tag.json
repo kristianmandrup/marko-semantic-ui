@@ -1,12 +1,13 @@
 {
     "@ui": "string",
     "@label": "string",
+    "@fieldWrap": "boolean",
     "@field": "string",
     "@icon": "string",
     "@action": "string",
     "@link": "string",
     "@tab": "number",
     "@value": "string",
-    "@placeholder": "string",    
+    "@placeholder": "string",
     "@menu": "object"
 }

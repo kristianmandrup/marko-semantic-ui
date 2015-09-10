@@ -1,6 +1,7 @@
 {
     "@name": "string",
     "@type": "string",
+    "@fieldWrap": "boolean",
     "@field": "string",
     "@label": "string",
     "@tab": "number",

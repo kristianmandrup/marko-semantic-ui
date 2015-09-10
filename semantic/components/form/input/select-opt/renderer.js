@@ -1,8 +1,7 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-  if (!input.fieldWrap)
-    input.fieldWrap = input.field || input.field !== '';
-
+  console.log('select opt', input);
+  input.label = input.label || input.value;
   template.render(input, out);
 };

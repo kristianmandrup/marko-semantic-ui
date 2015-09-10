@@ -2,6 +2,7 @@
     "@ui": "string",
     "@name": "string",
     "@field": "string",
+    "@fieldWrap": "boolean",    
     "@label": "string",
     "@tab": "number",
     "@list": "array",

@@ -1,5 +1,6 @@
 {
     "@field": "string",
+    "@fieldWrap": "boolean",
     "@ui": "string",
     "@label": "string",
     "@name": "string",

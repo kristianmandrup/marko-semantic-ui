@@ -1,10 +1,8 @@
 {
     "@ui": "string",
     "@label": "string",
-    "@type": "string",
     "@field": "string",
     "@fieldWrap": "boolean",    
-    "@name": "string",
-    "@checked": "boolean",
-    "@tab": "number"
+    "@icon": "boolean",
+    "@list": "array"
 }
