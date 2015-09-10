@@ -1,4 +1,4 @@
-html-element(tag-name='$data.tagName' class='$data.ui item' body-or='data.content')
+html-element(tag-name='$data.tagName' class='$data.ui item' style='$data.style' body-or='data.content')
   div(class='menu' if='data.list')
     for(each='item in data.list')
       menu-item(attrs='item')

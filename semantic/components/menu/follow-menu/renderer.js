@@ -1,8 +1,6 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-  console.log('follow-menu', out.global.menus);
-  console.log('-----------------');
   console.log('follow-menu', input);
   input.main = input.main || {};
   input.session = input.session || {};

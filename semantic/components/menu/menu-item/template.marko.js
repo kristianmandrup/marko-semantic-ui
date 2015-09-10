@@ -2,6 +2,7 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
+      attr = __helpers.a,
       escapeXmlAttr = __helpers.xa,
       forEach = __helpers.f,
       __renderer = __helpers.r,
@@ -15,6 +16,7 @@ function create(__helpers) {
   return function render(data, out) {
     out.w('<' +
       data.tagName +
+      attr("style", data.style) +
       ' class="' +
       escapeXmlAttr(data.ui) +
       ' item">');
