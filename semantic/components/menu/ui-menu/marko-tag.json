@@ -1,4 +1,5 @@
 {
     "@list": "array",
-    "@ui": "string"
+    "@ui": "string",
+    "@sidebar": "boolean"
 }

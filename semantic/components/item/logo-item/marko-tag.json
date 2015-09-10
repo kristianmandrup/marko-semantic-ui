@@ -1,0 +1,6 @@
+{
+    "@ui": "string",
+    "@label": "string",
+    "@image": "string",
+    "@link": "string"
+}

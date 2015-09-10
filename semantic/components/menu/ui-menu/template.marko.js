@@ -10,7 +10,7 @@ function create(__helpers) {
       tagBody = require("marko-tag-body/src/tag-body-helper");
 
   return function render(data, out) {
-    out.w('<div class="ui ' +
+    out.w('<div class="' +
       escapeXmlAttr(data.ui) +
       ' menu">');
 

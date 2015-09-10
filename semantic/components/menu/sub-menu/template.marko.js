@@ -21,7 +21,8 @@ function create(__helpers) {
         __tag(out,
           ___ui_menu_renderer_js,
           {
-            "list": data.menu
+            "list": data.menu,
+            "sidebar": data.sidebar
           });
       });
   };

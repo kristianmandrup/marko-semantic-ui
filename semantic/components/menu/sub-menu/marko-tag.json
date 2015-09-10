@@ -1,5 +1,6 @@
 {
     "@ui": "string",
     "@header": "object",
-    "@list": "array"
+    "@list": "array",
+    "@sidebar": "boolean"
 }
