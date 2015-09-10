@@ -1,6 +1,6 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-  input.tagName = 'h' + (input.lv || 1);
+  input.tagName = input.lv ? ('h' + input.lv) : 'div';
   template.render(input, out);
 };
