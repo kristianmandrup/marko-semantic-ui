@@ -3,25 +3,15 @@ function create(__helpers) {
       empty = __helpers.e,
       notEmpty = __helpers.ne,
       forEach = __helpers.f,
-      attr = __helpers.a,
-      escapeXml = __helpers.x;
+      __renderer = __helpers.r,
+      ___select_opt_renderer_js = __renderer(require("../select-opt/renderer")),
+      __tag = __helpers.t;
 
   return function render(data, out) {
     forEach(data.list, function(item) {
-      if (item.isSelected) {
-        out.w('<option' +
-          attr("value", item.value) +
-          ' selected>' +
-          escapeXml(item.label) +
-          '</option>');
-      }
-      else {
-        out.w('<option' +
-          attr("value", item.value) +
-          '>' +
-          escapeXml(item.label) +
-          '</option>');
-      }
+      __tag(out,
+        ___select_opt_renderer_js,
+        item);
     });
   };
 }
