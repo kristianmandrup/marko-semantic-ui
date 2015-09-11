@@ -2,20 +2,22 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
-      escapeXml = __helpers.x,
       escapeXmlAttr = __helpers.xa,
+      escapeXml = __helpers.x,
       attr = __helpers.a;
 
   return function render(data, out) {
-    var __strip0 = !(!data.field);
+    var __strip0 = !(!data.fieldWrap);
 
     if (__strip0) {
-      out.w('<div class="field">');
+      out.w('<div class="' +
+        escapeXmlAttr(data.field) +
+        ' field">');
     }
 
-    if (data.field) {
+    if (data.label) {
       out.w('<label>' +
-        escapeXml(data.field) +
+        escapeXml(data.label) +
         '</label>');
     }
 
