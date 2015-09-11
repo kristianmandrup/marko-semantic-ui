@@ -4,6 +4,7 @@
     "@label": "string",
     "@name": "string",
     "@field": "string",
+    "@fieldWrap": "boolean",
     "@type": "string",
     "@image": "string",
     "@icon": "string",

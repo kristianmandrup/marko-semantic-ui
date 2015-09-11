@@ -72,10 +72,8 @@ function create(__helpers) {
         attr("type", data.type) +
         ' class="ui ' +
         escapeXmlAttr(data.ui) +
-        ' button">');
-      __tag(out,
-        ______label_ui_label_renderer_js,
-        data);
+        ' button">' +
+        escapeXml(data.label));
 
       tagBody(out, data.renderBody);
 

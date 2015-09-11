@@ -1,6 +1,7 @@
 
 <div tag-body="" class="ui $data.ui buttons">
-  <for each="item in data.list" if="data.list">
-    <ui-btn attrs="item"></ui-btn>
+  <for each="item in data.list" status-var="loop">
+    <ui-button attrs="item"></ui-button>
+    <div if="data.or and !loop.isLast()" data-text="$data.or" class="or"></div>
   </for>
 </div>

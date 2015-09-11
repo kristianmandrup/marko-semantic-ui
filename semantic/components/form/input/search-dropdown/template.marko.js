@@ -2,63 +2,42 @@ function create(__helpers) {
   var str = __helpers.s,
       empty = __helpers.e,
       notEmpty = __helpers.ne,
-      __renderer = __helpers.r,
-      ___check_toggle_renderer_js = __renderer(require("../check-toggle/renderer")),
-      __tag = __helpers.t,
-      ___check_slider_renderer_js = __renderer(require("../check-slider/renderer")),
       escapeXmlAttr = __helpers.xa,
-      attr = __helpers.a,
-      escapeXml = __helpers.x;
+      __renderer = __helpers.r,
+      _________icon_ui_icon_renderer_js = __renderer(require("../../../icon/ui-icon/renderer")),
+      __tag = __helpers.t,
+      escapeXml = __helpers.x,
+      _________menu_ui_menu_renderer_js = __renderer(require("../../../menu/ui-menu/renderer"));
 
   return function render(data, out) {
-    if (data.toggle) {
-      __tag(out,
-        ___check_toggle_renderer_js,
-        data);
+    var __strip0 = !(!data.fieldWrap);
+
+    if (__strip0) {
+      out.w('<div class="' +
+        escapeXmlAttr(data.field) +
+        ' field">');
     }
 
-    if (data.slider) {
-      __tag(out,
-        ___check_slider_renderer_js,
-        data);
-    }
+    out.w('<div class="ui ' +
+      escapeXmlAttr(data.ui) +
+      ' floating dropdown labeled search icon button">');
+    __tag(out,
+      _________icon_ui_icon_renderer_js,
+      data.icon);
 
-    if (data.default) {
-      var __strip0 = !(!data.field);
+    out.w('<span class="text">' +
+      escapeXml(data.label) +
+      '</span>');
+    __tag(out,
+      _________menu_ui_menu_renderer_js,
+      {
+        "list": data.list
+      });
 
-      if (__strip0) {
-        out.w('<div class="' +
-          escapeXmlAttr(data.field) +
-          ' field">');
-      }
+    out.w('</div>');
 
-      var __strip1 = !(!data.ui);
-
-      if (__strip1) {
-        out.w('<div class="ui ' +
-          escapeXmlAttr(data.ui) +
-          ' checkbox">');
-      }
-
-      out.w('<input type="checkbox"' +
-        attr("name", data.name) +
-        attr("checked", data.checked) +
-        attr("tabindex", data.tab) +
-        ' class="hidden">');
-
-      if (data.label) {
-        out.w('<label>' +
-          escapeXml(data.label) +
-          '</label>');
-      }
-
-      if (__strip1) {
-        out.w('</div>');
-      }
-
-      if (__strip0) {
-        out.w('</div>');
-      }
+    if (__strip0) {
+      out.w('</div>');
     }
   };
 }

@@ -1,3 +1,6 @@
 {
-    "@label": "string"
+    "@ui": "string",
+    "@list": "array",
+    "@or": "string",
+    "@positive": "string"
 }

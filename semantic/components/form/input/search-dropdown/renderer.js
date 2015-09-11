@@ -19,5 +19,7 @@ exports.renderer = function(input, out) {
   input.slider  = input.type == 'slider';
   input.default = !(input.toggle || input.slider);
 
+  console.log('search-dropdown ready', input);
+
   template.render(input, out);
 };

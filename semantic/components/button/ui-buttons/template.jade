@@ -1,3 +1,4 @@
 div(class='ui $data.ui buttons' tag-body='')
-  for(each='item in data.list' if='data.list')
-    ui-btn(attrs='item')
+  for(each='item in data.list' status-var='loop')
+    ui-button(attrs='item')
+    div(class='or' if='data.or and !loop.isLast()' data-text='$data.or')

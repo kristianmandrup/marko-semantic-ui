@@ -1,7 +1,9 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-  input.fieldWrap = input.field || input.field !== '';
+  console.log('ui-button', input);
+  if (!input.fieldWrap && input.field)
+    input.fieldWrap = input.field !== '';
   input.type = input.type || 'button';
   input.btn = true;
   if (typeof input.icon === 'string') {
@@ -9,6 +11,6 @@ exports.renderer = function(input, out) {
       name: input.icon
     };
   }
-
+  console.log('ui-button ready', input);
   template.render(input, out);
 };
