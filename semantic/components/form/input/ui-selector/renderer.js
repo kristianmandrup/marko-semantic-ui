@@ -1,7 +1,7 @@
 var template = require('./template.marko');
 
 exports.renderer = function(input, out) {
-  if (!input.fieldWrap)
+  if (!input.fieldWrap && input.field)
     input.fieldWrap = input.field || input.field !== '';
 
   input.refList = input.refList || [];
