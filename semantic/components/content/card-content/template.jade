@@ -1,8 +1,8 @@
 div(class='$data.ui content')
   ui-icons(list='$data.icons' if='data.icons')
   div(class='header' if='data.header') $data.header
-  div(class='meta' if='data.data')
-    span.date $data.date
+  div(class='meta' if='data.meta')
+    html-element(tag-name='data.meta.tag') $data.meta.label
   div(class='description' if='data.desc')
     $data.desc
   ui-button(attrs='data.btn' if='data.btn')

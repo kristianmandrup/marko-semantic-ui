@@ -1,2 +1,6 @@
-i(class='$data.ui $data.name icon' data-content='$data.tip' if='data.tip') $data.label
-i(class='$data.ui $data.name icon' else='') $data.label
+xif(test='data.label')
+  i(class='$data.ui $data.name icon' data-content='$data.tip' if='data.tip') $data.label
+  i(class='$data.ui $data.name icon' else='') $data.label
+xelse
+  i(class='$data.ui $data.name icon' data-content='$data.tip' if='data.tip')
+  i(class='$data.ui $data.name icon' else='')

@@ -1,0 +1,11 @@
+div(class='extra content' tag-body='')
+  //- action button
+  ui-button(attrs='data.button' if='data.button')
+  var(name='pos' value='')
+  //- meta data 
+  for(each='item in data.meta' status-var='loop' if='data.meta')    
+    assign(var='pos' value='right floated' if='loop.isLast()')
+    span(class='$item.ui $pos')
+      ui-icon(attrs='item.icon' if='item.icon')
+      | $item.caption
+    
