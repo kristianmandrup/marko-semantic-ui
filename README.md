@@ -1,6 +1,8 @@
 marko-semantic-ui-taglibs [![NPM version](https://badge.fury.io/js/marko-semantic-ui-taglibs.svg)](https://npmjs.org/package/marko-semantic-ui-taglibs) [![Build Status](https://travis-ci.org/kristianmandrup/marko-semantic-ui-taglibs.svg?branch=master)](https://travis-ci.org/kristianmandrup/marko-semantic-ui-taglibs) [![Dependency Status](https://david-dm.org/kristianmandrup/marko-semantic-ui-taglibs.svg?theme=shields.io)](https://david-dm.org/kristianmandrup/marko-semantic-ui-taglibs)
 =========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/marko-semantic-ui-taglibs.svg)](https://greenkeeper.io/)
+
 > Marko taglibs for Semantic UI
 
 ### TODO
